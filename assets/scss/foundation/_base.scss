@@ -18,9 +18,10 @@ html {
 }
 
 body {
-  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-style: normal;
   font-size: 16rem;
   font-weight: g.$font-weight-regular;
   letter-spacing: 0.01em;
+  color: g.$color-text;
 }
