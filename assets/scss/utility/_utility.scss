@@ -1,0 +1,101 @@
+@use "../global/variables" as v;
+@use "../global/mixin" as g;
+
+/* --------------------------------------
+  utility
+-------------------------------------- */
+
+/* padding */
+.u-p {
+  padding: 30rem;
+}
+
+/* padding-inline */
+.u-pi {
+  padding-inline: 30rem;
+}
+
+/* background-image */
+.u-bg {
+  background-repeat: no-repeat;
+}
+
+/* hover時、下線が伸びる */
+.u-underline {
+  background-image: linear-gradient(90deg, currentcolor, currentcolor);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: 0% 0.06em;
+  transition: background-size 0.36s ease-out;
+}
+
+.u-underline:hover {
+  @include g.media() {
+    background-position: 0% 100%;
+    background-size: 100% 0.06em;
+    transition-duration: 0.24s;
+  }
+}
+
+/* hover時、半透明にする */
+.u-link {
+  transition: opacity 0.3s;
+}
+
+.u-link:hover {
+  @include g.media() {
+    opacity: 0.7;
+  }
+}
+
+/* スクロール無効化 */
+.u-scroll-hidden {
+  overflow: hidden;
+}
+
+/* pc 非表示 */
+.u-pc-hidden {
+  @include g.media() {
+    display: none;
+  }
+}
+
+/* sp 非表示 */
+.u-sp-hidden {
+  display: none;
+
+  @include g.media() {
+    display: block;
+  }
+}
+
+/* font 英語 */
+.u-en {
+  font-family: "Outfit", sans-serif;
+  text-transform: capitalize;
+}
+
+/* mask-img */
+.u-mask-img {
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+}
+
+/* overflow-hidden */
+.u-overflow-hidden {
+  overflow: hidden;
+}
+
+/* visually-hidden */
+.u-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

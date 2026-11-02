@@ -1,0 +1,78 @@
+/* --------------------------------------
+	reset css
+-------------------------------------- */
+
+/* border-box を全要素にセット */
+:where(*, ::before, ::after) {
+  box-sizing: border-box;
+}
+
+/* 全要素のマージンをリセット */
+* {
+  margin: 0;
+}
+
+/* 親要素をはみ出さないようにする + 隙間ができないようにする */
+:where(img, video) {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+
+/* iframe */
+:where(iframe) {
+  display: block;
+  border: none;
+}
+
+/* テキストのオーバーフローを回避 */
+:where(p, h1, h2, h3, h4, h5, h6) {
+  overflow-wrap: break-word;
+}
+
+/* フォーム要素のタイポグラフィをリセット */
+:where(input, button, textarea, select) {
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  border: 0;
+  background: transparent;
+}
+
+/* ボタン要素のタイポグラフィをリセット */
+:where(button) {
+  background: none;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+/* テキストエリアの水平リサイズを無効に */
+:where(textarea) {
+  resize: vertical;
+}
+
+/* カーソル セット */
+:where(button, label, select, summary) {
+  cursor: pointer;
+}
+
+/* リストのデフォルト記号を非表示 */
+:where(ul, ol) {
+  list-style: none;
+  padding: 0;
+}
+
+/* リンクのデフォルトスタイルをリセット */
+:where(a) {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* addressのデフォルトスタイルをリセット */
+:where(address) {
+  font-style: normal;
+}

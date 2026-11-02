@@ -1,0 +1,33 @@
+// --------------------------------------
+// mixin
+// --------------------------------------
+@use "sass:map";
+
+// breakpoints //
+$breakpoints: (
+  xs: "(width >= 320px)",
+  s: "(width >= 575px)",
+  m: "(width >= 767px)",
+  l: "(width >= 900px)",
+  xl: "(width >= 1199px)",
+);
+
+@mixin media($breakpoint: l) {
+  @media #{map.get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// mask-img
+@mixin mask-img {
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
+
+// background-img
+@mixin background-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

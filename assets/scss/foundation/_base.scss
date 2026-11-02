@@ -1,0 +1,26 @@
+@use "../global" as g;
+
+/* --------------------------------------
+  base
+-------------------------------------- */
+
+:root {
+  --base-vw: 375;
+
+  @include g.media() {
+    --base-vw: 1440;
+  }
+}
+
+html {
+  font-size: calc(100vw / var(--base-vw));
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-style: normal;
+  font-size: 16rem;
+  font-weight: g.$font-weight-regular;
+  letter-spacing: 0.01em;
+}
