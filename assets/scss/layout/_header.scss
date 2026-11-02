@@ -3,3 +3,169 @@
 /* --------------------------------------
   header
 -------------------------------------- */
+.l-header {
+  width: 348rem;
+  height: 50rem;
+  margin: 0 auto;
+  box-shadow: 0px 0px 12px 0px rgba($color: #000000, $alpha: 0.1);
+  border-radius: 16rem;
+  background-color: g.$color-white;
+
+  @include g.media() {
+    width: 1400rem;
+    height: 68rem;
+    box-shadow: 0px 0px 0px 0px transparent;
+    border-radius: 0;
+  }
+}
+
+.l-header__inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 19rem;
+}
+
+.l-header__logo {
+  width: 100rem;
+
+  @include g.media() {
+    width: auto;
+    padding-inline: 45rem;
+    justify-content: center;
+
+    a {
+      width: 150rem;
+    }
+  }
+}
+
+.l-header__nav {
+  @include g.media() {
+    padding-inline: 56rem 14rem;
+  }
+}
+
+// pcではロゴとナビゲーションにbox-shadowを設定
+.l-header__logo,
+.l-header__nav {
+  @include g.media() {
+    box-shadow: 0px 0px 12px 0px rgba($color: #000000, $alpha: 0.1);
+    border-radius: 25rem;
+    background-color: g.$color-white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.l-header__list {
+  @include g.media() {
+    display: flex;
+    align-items: center;
+    gap: 32rem;
+  }
+}
+
+.l-header__item {
+}
+
+.l-header__link {
+  @include g.media() {
+    font-weight: g.$font-weight-semibold;
+    color: g.$color-bg;
+  }
+}
+
+// entry以外のnav-itemにhoverアニメーションを設定
+.l-header__item:not(.l-header__item--entry) {
+  .l-header__link {
+    @include g.media() {
+      padding-bottom: 23rem;
+      transition:
+        color 0.3s,
+        background-size 0.3s;
+
+      &:hover {
+        color: g.$color-red;
+        background-size: 100% 2rem;
+      }
+    }
+  }
+}
+
+// entry
+.l-header__item--entry {
+  .l-header__link {
+    @include g.media() {
+      display: grid;
+      place-items: center;
+      background-color: g.$color-red;
+      color: g.$color-white;
+      transition: background-color 0.3s;
+      width: 160rem;
+      height: 40rem;
+      border-radius: 10rem;
+      letter-spacing: -0.19em;
+
+      &:hover {
+        background-color: #d50010;
+      }
+    }
+  }
+}
+
+.l-header__hamburger-btn {
+  width: 36rem;
+  height: 8rem;
+  position: relative;
+  transition:
+    width 0.3s,
+    height 0.3s;
+
+  // border
+  span {
+    background-color: currentColor;
+    height: 1rem;
+    position: absolute;
+    right: 0;
+    transition:
+      width 0.3s,
+      transform 0.3s;
+
+    // 1つ目のborder
+    &:nth-of-type(1) {
+      width: 100%;
+      top: 0;
+    }
+
+    // 2つ目のborder
+    &:nth-of-type(2) {
+      width: 72.2%;
+      bottom: 0;
+    }
+  }
+
+  // ハンバーガーメニューopen時
+  &.is-open {
+    width: 35rem;
+    height: 10rem;
+
+    span {
+      transform-origin: right;
+
+      // 1つ目のborder
+      &:nth-of-type(1) {
+        transform: rotate(-15deg);
+      }
+
+      // 2つ目のborder
+      &:nth-of-type(2) {
+        width: 100%;
+        transform: rotate(15deg);
+      }
+    }
+  }
+}
