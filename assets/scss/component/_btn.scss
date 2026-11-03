@@ -1,0 +1,57 @@
+@use "../global/" as g;
+
+/* --------------------------------------
+  btn
+-------------------------------------- */
+
+.c-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 48rem 14rem;
+  width: 284rem;
+  height: 64rem;
+  border-radius: 16rem;
+  background-color: g.$color-bg;
+  color: g.$color-white;
+  font-size: 16rem;
+  font-weight: g.$font-weight-bold;
+  line-height: 2.43;
+  letter-spacing: -0.08em;
+  position: relative;
+  z-index: g.$z-index-default;
+  overflow: hidden;
+
+  // hover時、円形に背景が広がる
+  &::before {
+    content: "";
+    display: block;
+    background-color: g.$color-accent;
+    width: 100%;
+    height: 150%;
+    position: absolute;
+    left: -35%;
+    z-index: -1;
+    transform-origin: left;
+    transform: scaleX(0);
+    border-radius: 50%;
+    transition: transform 0.5s;
+  }
+
+  .c-btn-arrow {
+    transition: background-color 0.3s;
+  }
+
+  // hover時、背景色を変更
+  @include g.media() {
+    &:hover {
+      &::before {
+        transform: scaleX(2);
+      }
+
+      .c-btn-arrow {
+        background-color: rgba($color: g.$color-white, $alpha: 0.2);
+      }
+    }
+  }
+}
