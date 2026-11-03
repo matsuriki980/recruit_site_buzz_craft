@@ -15,6 +15,7 @@
   left: 50%;
   transform: translateX(-50%);
   transition: background-color 0.3s;
+  display: none;
 
   @include g.media() {
     width: 1400rem;
