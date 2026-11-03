@@ -64,23 +64,10 @@
   }
 
   .l-hamburger-menu__link-arrow {
-    display: grid;
-    place-items: center;
-    width: 36rem;
-    aspect-ratio: 1/1;
-    border-radius: 8rem;
     background-color: rgba($color: #929292, $alpha: 0.2);
 
     // 矢印
     &::before {
-      content: "";
-      display: block;
-      width: 8rem;
-      aspect-ratio: 1/1;
-      mask-image: url(../images/common/hamburger-menu-arrow.svg);
-      mask-position: center;
-      mask-repeat: no-repeat;
-      mask-size: contain;
       background-color: g.$color-text;
     }
   }
