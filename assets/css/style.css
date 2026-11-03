@@ -521,22 +521,9 @@ body {
   letter-spacing: 0;
 }
 .l-hamburger-menu__item .l-hamburger-menu__link-arrow {
-  display: grid;
-  place-items: center;
-  width: 36rem;
-  aspect-ratio: 1/1;
-  border-radius: 8rem;
   background-color: rgba(146, 146, 146, 0.2);
 }
 .l-hamburger-menu__item .l-hamburger-menu__link-arrow::before {
-  content: "";
-  display: block;
-  width: 8rem;
-  aspect-ratio: 1/1;
-  mask-image: url(../images/common/hamburger-menu-arrow.svg);
-  mask-position: center;
-  mask-repeat: no-repeat;
-  mask-size: contain;
   background-color: #1d1d1d;
 }
 .l-hamburger-menu__item:first-of-type .l-hamburger-menu__link {
