@@ -205,6 +205,43 @@ body {
 /* --------------------------------------
   title
 -------------------------------------- */
+.c-title__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 9rem;
+}
+@media (width >= 900px) {
+  .c-title__wrapper {
+    gap: 20rem;
+  }
+}
+
+.c-title-ja {
+  font-size: 22rem;
+  font-weight: 700;
+  letter-spacing: -0.08em;
+  line-height: 1.77;
+}
+@media (width >= 900px) {
+  .c-title-ja {
+    font-size: 32rem;
+  }
+}
+
+.c-title-en {
+  font-size: 16rem;
+  font-family: "Hepta Slab", serif;
+  font-weight: 600;
+  opacity: 0.3;
+  text-transform: capitalize;
+  margin-top: 4rem;
+}
+@media (width >= 900px) {
+  .c-title-en {
+    font-size: 20rem;
+  }
+}
+
 /* --------------------------------------
   header
 -------------------------------------- */
@@ -460,6 +497,7 @@ body {
 .l-footer {
   color: #ffffff;
   background-color: #303030;
+  display: none;
 }
 
 .l-footer__inner {

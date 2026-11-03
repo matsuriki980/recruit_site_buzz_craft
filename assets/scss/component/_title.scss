@@ -3,3 +3,36 @@
 /* --------------------------------------
   title
 -------------------------------------- */
+.c-title__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 9rem;
+
+  @include g.media() {
+    gap: 20rem;
+  }
+}
+
+.c-title-ja {
+  font-size: 22rem;
+  font-weight: g.$font-weight-bold;
+  letter-spacing: -0.08em;
+  line-height: 1.77;
+
+  @include g.media() {
+    font-size: 32rem;
+  }
+}
+
+.c-title-en {
+  font-size: 16rem;
+  font-family: g.$font-family-en;
+  font-weight: g.$font-weight-semibold;
+  opacity: 0.3;
+  text-transform: capitalize;
+  margin-top: 4rem;
+
+  @include g.media() {
+    font-size: 20rem;
+  }
+}
