@@ -1,0 +1,100 @@
+@use "../../global/" as g;
+
+/* --------------------------------------
+  top-about
+-------------------------------------- */
+.p-top-about {
+  position: relative;
+  isolation: isolate;
+  color: g.$color-white;
+}
+
+.p-top-about__background {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100lvh;
+  z-index: g.$z-index-negative;
+  background-image: url(../images/top/top_about_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.p-top-about__inner {
+  position: relative;
+  z-index: g.$z-index-default;
+  display: flex;
+  flex-direction: column;
+  gap: 50rem;
+  padding: 70rem 20rem;
+  margin-top: -100lvh;
+
+  @include g.media() {
+    display: grid;
+    grid-template-columns: 536rem 160rem;
+    justify-content: space-between;
+    padding: 100rem 220rem;
+  }
+}
+
+.p-top-about__title {
+  width: 112rem;
+  margin: 0 auto;
+
+  @include g.media() {
+    order: 2;
+    width: 100%;
+    position: sticky;
+    top: 110rem;
+    right: 0;
+    align-self: start; // 追加
+  }
+}
+
+.p-top-about__content {
+  display: flex;
+  flex-direction: column;
+  gap: 60rem;
+
+  @include g.media() {
+    margin-top: 170rem;
+    gap: 75rem;
+  }
+}
+
+.p-top-about__heading {
+  font-size: 24rem;
+  line-height: 1.625;
+  letter-spacing: -0.08em;
+  font-weight: g.$font-weight-bold;
+  margin-bottom: 15rem;
+
+  @include g.media() {
+    font-size: 32rem;
+  }
+}
+
+.p-top-about__description {
+  font-size: 18rem;
+  line-height: 1.8;
+  letter-spacing: -0.05em;
+  font-weight: g.$font-weight-medium;
+
+  @include g.media() {
+    font-size: 24rem;
+  }
+}
+
+.p-top-about__text--second {
+  .p-top-about__description {
+    display: flex;
+    flex-direction: column;
+    gap: 48rem;
+
+    @include g.media() {
+      gap: 56rem;
+    }
+  }
+}
