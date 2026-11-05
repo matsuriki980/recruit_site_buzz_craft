@@ -1,0 +1,143 @@
+@use "../../global/" as g;
+
+/* --------------------------------------
+  top-people
+-------------------------------------- */
+
+.p-top-people {
+  color: g.$color-purple;
+}
+
+.p-top-people__inner {
+  padding: 60rem 20rem;
+
+  @include g.media() {
+    padding: 107rem 218rem 230rem;
+  }
+}
+
+.p-top-people__slider {
+  position: relative;
+  margin-bottom: 39rem;
+
+  @include g.media() {
+    margin-bottom: 43rem;
+  }
+}
+
+.p-top-people__list {
+}
+
+.p-top-people__item {
+  @include g.media() {
+    display: grid;
+    grid-template-columns: 383rem 511rem;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 24rem 53rem;
+  }
+}
+
+.p-top-people__img {
+  width: 268rem;
+  margin: 0 auto;
+
+  @include g.media() {
+    width: 100%;
+  }
+}
+
+.p-top-people__content {
+}
+
+.p-top-people__text {
+}
+
+.p-top-people__employee-info {
+  font-size: 11rem;
+  line-height: 2.27;
+  letter-spacing: -0.08em;
+  font-weight: g.$font-weight-medium;
+  opacity: 0.5;
+  color: g.$color-text;
+
+  @include g.media() {
+    font-size: 16rem;
+  }
+}
+
+.p-top-people__heading {
+  font-size: 25rem;
+  font-weight: g.$font-weight-bold;
+  letter-spacing: -0.08em;
+  line-height: 1.28;
+  margin-bottom: 13rem;
+
+  @include g.media() {
+    font-size: 40rem;
+    margin-bottom: 20rem;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+.p-top-people__graph {
+}
+
+.p-top-people__pagination {
+  width: 42rem;
+  aspect-ratio: 1/1;
+  background-color: g.$color-bg;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  right: -9rem;
+  top: 144rem;
+
+  @include g.media() {
+    width: 60rem;
+    top: 210rem;
+    right: -30rem;
+  }
+
+  // 矢印
+  &::before {
+    content: "";
+    display: block;
+    width: 8.4rem;
+    aspect-ratio: 1/1;
+    mask-image: url(../images/common/arrow.svg);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    background-color: g.$color-white;
+
+    @include g.media() {
+      width: 12rem;
+    }
+  }
+}
+
+.p-top-people__pagination--prev {
+  transform: scaleX(-1);
+  right: auto;
+  left: -9rem;
+
+  @include g.media() {
+    left: -30rem;
+  }
+}
+
+.p-top-people__btn {
+  margin: 0 auto;
+
+  // hover時、円形に背景が広がる
+  @include g.media() {
+    &::before {
+      background-color: g.$color-purple;
+    }
+  }
+}
