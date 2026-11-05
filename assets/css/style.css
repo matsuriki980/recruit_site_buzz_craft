@@ -266,7 +266,6 @@ body {
 .c-btn::before {
   content: "";
   display: block;
-  background-color: #3897f1;
   width: 100%;
   height: 150%;
   position: absolute;
@@ -1083,6 +1082,138 @@ body {
 @media (width >= 900px) {
   .p-top-about__text--second .p-top-about__description {
     gap: 56rem;
+  }
+}
+
+/* --------------------------------------
+  top-people
+-------------------------------------- */
+.p-top-people {
+  color: #a407ba;
+}
+
+.p-top-people__inner {
+  padding: 60rem 20rem;
+}
+@media (width >= 900px) {
+  .p-top-people__inner {
+    padding: 107rem 218rem 230rem;
+  }
+}
+
+.p-top-people__slider {
+  position: relative;
+  margin-bottom: 39rem;
+}
+@media (width >= 900px) {
+  .p-top-people__slider {
+    margin-bottom: 43rem;
+  }
+}
+
+@media (width >= 900px) {
+  .p-top-people__item {
+    display: grid;
+    grid-template-columns: 383rem 511rem;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 24rem 53rem;
+  }
+}
+
+.p-top-people__img {
+  width: 268rem;
+  margin: 0 auto;
+}
+@media (width >= 900px) {
+  .p-top-people__img {
+    width: 100%;
+  }
+}
+
+.p-top-people__employee-info {
+  font-size: 11rem;
+  line-height: 2.27;
+  letter-spacing: -0.08em;
+  font-weight: 500;
+  opacity: 0.5;
+  color: #1d1d1d;
+}
+@media (width >= 900px) {
+  .p-top-people__employee-info {
+    font-size: 16rem;
+  }
+}
+
+.p-top-people__heading {
+  font-size: 25rem;
+  font-weight: 700;
+  letter-spacing: -0.08em;
+  line-height: 1.28;
+  margin-bottom: 13rem;
+}
+@media (width >= 900px) {
+  .p-top-people__heading {
+    font-size: 40rem;
+    margin-bottom: 20rem;
+  }
+}
+.p-top-people__heading span {
+  display: block;
+}
+
+.p-top-people__pagination {
+  width: 42rem;
+  aspect-ratio: 1/1;
+  background-color: #303030;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  right: -9rem;
+  top: 144rem;
+}
+@media (width >= 900px) {
+  .p-top-people__pagination {
+    width: 60rem;
+    top: 210rem;
+    right: -30rem;
+  }
+}
+.p-top-people__pagination::before {
+  content: "";
+  display: block;
+  width: 8.4rem;
+  aspect-ratio: 1/1;
+  mask-image: url(../images/common/arrow.svg);
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  background-color: #ffffff;
+}
+@media (width >= 900px) {
+  .p-top-people__pagination::before {
+    width: 12rem;
+  }
+}
+
+.p-top-people__pagination--prev {
+  transform: scaleX(-1);
+  right: auto;
+  left: -9rem;
+}
+@media (width >= 900px) {
+  .p-top-people__pagination--prev {
+    left: -30rem;
+  }
+}
+
+.p-top-people__btn {
+  margin: 0 auto;
+}
+@media (width >= 900px) {
+  .p-top-people__btn::before {
+    background-color: #a407ba;
   }
 }
 
