@@ -1,0 +1,22 @@
+@use "../global/" as g;
+
+/* --------------------------------------
+  company-slider
+-------------------------------------- */
+.l-company__slider-wrapper {
+	display: flex;
+    flex-direction: column;	
+}
+
+.l-company__slider-track {
+	overflow: hidden;
+}
+
+.l-company__slider-list {
+	display: grid;
+	grid-template-columns: repeat(4,205rem);
+	
+	@include g.media() {
+		grid-template-columns: repeat(4,440rem);
+	}
+}
