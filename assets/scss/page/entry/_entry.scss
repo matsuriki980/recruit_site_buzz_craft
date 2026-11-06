@@ -1,0 +1,97 @@
+@use "../../global/" as g;
+
+/* --------------------------------------
+  entry
+-------------------------------------- */
+.p-entry {
+	
+	&__inner {
+		padding: 80rem 20rem;
+		
+		@include g.media() {
+			padding: 145rem 220rem 136rem;
+		}
+	}
+	
+	&__lead {
+		font-size: 16rem;
+		font-weight: g.$font-weight-bold;
+		letter-spacing: -0.05em;
+		line-height: 2;
+		text-align: center;
+		margin-bottom: 40rem;
+		
+		span {
+			display: block;
+		}
+	}
+}
+
+.p-entry-recruit {
+	
+	&__inner {
+		padding-block: 40rem;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+		border-top: 1px solid rgba(0, 0, 0, 0.2);
+				
+		@include g.media() {
+			padding-block: 62rem;
+			display: grid;
+			grid-template-columns: 280rem 1fr;
+			align-items: flex-start;
+		}
+	}
+	
+	&__title-wrapper {
+		color: g.$color-accent;
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+		margin-bottom: 24rem;
+
+		@include g.media() {
+			align-items: flex-start;
+			margin-bottom: 0;
+		}
+	}
+	
+	&__title-ja {
+		font-size: 24rem;
+		
+		@include g.media() {
+			font-size: 32rem;
+		}
+	}
+	
+	&__text {
+		font-size: 16rem;
+		font-weight: g.$font-weight-semibold;
+		letter-spacing: -0.05em;
+		line-height: 2;
+		text-align: center;
+		margin-bottom: 24rem;
+		
+		@include g.media() {
+			margin-bottom: 17rem;
+			text-align: left;
+		}
+		
+		span {
+			display: block;
+			
+			@include g.media() {
+				display: inline;
+			}
+		}
+	}
+	
+	&__img {
+		width: 80%;
+		margin: 0 auto;
+		
+		@include g.media() {
+			width: 160rem;
+			margin: 0;
+		}
+	}
+}
