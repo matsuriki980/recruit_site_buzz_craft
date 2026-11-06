@@ -1,0 +1,259 @@
+@use "../../global/" as g;
+
+/* --------------------------------------
+  top-environment
+-------------------------------------- */
+.p-top-environment__inner {
+	padding: 61rem 20rem;
+	
+	@include g.media() {
+		padding: 124rem 0 0 170rem;
+    	display: grid;
+		grid-template-columns: 1fr 810rem;
+		gap: 104rem;
+  }
+}
+
+.p-top-environment__title {
+	color: g.$color-orange;
+	margin-bottom: 34rem;
+	
+	@include g.media() {
+		margin-bottom: 17rem;
+	}
+}
+
+.p-top-environment__description {
+	font-size: 16rem;
+	font-weight: g.$font-weight-medium;
+	line-height: 2;
+	letter-spacing: -0.05em;
+	margin-bottom: 29rem;
+	
+	@include g.media() {
+    	font-size: 18rem;
+		margin-bottom: 56rem;
+	}
+
+	span {
+		display: block;
+	}
+}
+
+.p-top-environment__list {
+	margin-bottom: 40rem;
+	
+	@include g.media() {
+		margin-bottom: 50rem;
+	}
+}
+
+.p-top-environment__link {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-block: 26rem;
+	position: relative;
+	
+	@include g.media() {
+		padding-block: 29rem;
+	}
+	
+	
+	// 下のborder
+	&::before,
+	&::after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 1rem;
+	    position: absolute;
+		bottom: 0;
+	}
+	
+	// デフォルト表示のborder
+	&::before {
+		background-color: rgba(0,0,0,0.1);
+	    left: 0;
+	}
+	
+	// hoverした時の伸びるborder
+	&::after {
+		background-color: rgba(0,0,0,1);
+		right: 0;
+		width: 0;
+		transition: width 0.3s;
+	}
+
+	
+	&-content {
+		display: grid;
+		align-items: center;
+		grid-template-columns: 80rem 1fr;
+		grid-template-rows: 1fr;
+		gap: 0 18rem;
+		
+		@include g.media() {
+			display: block;
+		}
+		
+		// 画像
+		&::before {
+			content: "";
+			display: block;
+			background-color: aqua;
+			border-radius: 10rem;
+			width: 100%;
+			aspect-ratio: 1/1;
+			grid-column: 1/2;
+			grid-row: 1/3;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			
+			@include g.media() {
+				display: none;
+			}
+		}
+	}
+	
+	&-text {
+		display: grid;
+		grid-template-columns: 1fr;
+		
+		@include g.media() {
+			display: flex;
+			align-items: center;
+			gap: 22rem;
+		}
+		
+		// 日本語
+		&-ja {
+			font-size: 20rem;
+			font-weight: g.$font-weight-bold;
+			line-height: 2;
+			letter-spacing: -0.08em;
+			
+			@include g.media() {
+				font-size: 24rem;
+			}
+		}		
+		
+		// 英語
+		&-en {
+			font-size: 14rem;
+			font-family: g.$font-family-en;
+			font-weight: g.$font-weight-regular;
+			opacity: 0.3;
+			text-transform: capitalize;
+		}
+	}
+	
+	// 矢印
+	&-arrow {
+		transition: background-color 0.3s;
+		
+		&::before {
+			background-color: g.$color-text;
+			transition: background-color 0.3s;
+		}
+	}
+	
+	// リンクをhover時の設定
+	@include g.media() {
+  		&:hover {
+			
+			// hover時、link下のborderが伸びる
+			&::after {
+				width: 100%;
+				left: 0;
+				right: auto;
+			}
+
+    		// 矢印
+    		.p-top-environment__link-arrow {
+     			 background-color: g.$color-text;
+
+     			 &::before {
+     			   background-color: g.$color-white;
+      			}
+    		}
+ 		 }
+	}
+}
+
+// 一つ目のリンクの画像
+.p-top-environment__item:nth-of-type(1) {
+	
+	.p-top-environment__link {
+		
+		&-content {
+			&::before {
+				background-image: url("../images/top/top_environment_01.png")
+			}
+		}
+	}
+}
+
+// 二つ目のリンクの画像
+.p-top-environment__item:nth-of-type(2) {
+	
+	.p-top-environment__link {
+		
+		&-content {
+			&::before {
+				background-image: url("../images/top/top_environment_02.png")
+			}
+		}
+	}
+}
+
+// 三つ目のリンクの画像
+.p-top-environment__item:nth-of-type(3) {
+	
+	.p-top-environment__link {
+		
+		&-content {
+			&::before {
+				background-image: url("../images/top/top_environment_03.png")
+			}
+		}
+	}
+}
+	
+.p-top-environment__imgs {
+	
+	@include g.media() {
+	  height: 831rem;
+	  position: relative;
+	}
+}
+
+.p-top-environment__img {
+	
+	@include g.media() {
+		position: absolute;
+		inset: 0;
+		opacity: 0;
+		visibility: hidden;
+	
+		// hover時、リンクに対応する画像を表示する	
+		&.is-active {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+
+.p-top-environment__btn {
+	margin: 0 auto;
+	
+	// hover時、円形に背景が広がる
+    @include g.media() {
+	  margin: 0;
+		
+      &::before {
+        background-color: g.$color-orange;
+    }
+  }
+}
