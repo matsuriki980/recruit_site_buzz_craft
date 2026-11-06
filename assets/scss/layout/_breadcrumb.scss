@@ -1,0 +1,70 @@
+@use "../global/" as g;
+
+/* --------------------------------------
+  breadcrumb
+-------------------------------------- */
+.l-breadcrumb {
+	position: absolute;
+	top: -28rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 335rem;
+	height: 55rem;
+	background-color: g.$color-white;
+	border-radius: 20rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-inline: 20rem;
+	
+	@include g.media() {
+		width: 1100rem;
+		border-radius: 27.5rem;
+		padding-inline: 40rem;
+	}
+	
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: 24rem;
+	}
+	
+	&__link {
+		font-size: 12rem;
+		font-weight: g.$font-weight-semibold;
+		text-transform: capitalize;
+		opacity: 1;
+		
+		// 現在いるページは半透明に
+		&.is-active {
+			opacity: 0.4;
+		}
+	}
+	
+	&__arrow {
+		width: 6rem;
+		margin-top: 4rem;
+	}
+	
+	&__scroll-bar {
+		font-size: 12rem;
+		font-weight: g.$font-weight-semibold;
+		display: flex;
+		align-items: center;
+		gap: 8rem;
+		
+		// 矢印
+		&::after {
+			content: "";
+			display: block;
+			width: 8rem;
+			aspect-ratio: 1/1;
+			margin-top: 2rem;
+			background-image: url("../images/common/arrow.svg");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			transform: rotate(90deg);
+		}
+	}
+}

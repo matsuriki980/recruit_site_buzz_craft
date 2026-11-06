@@ -1014,6 +1014,68 @@ body {
 }
 
 /* --------------------------------------
+  breadcrumb
+-------------------------------------- */
+.l-breadcrumb {
+  position: absolute;
+  top: -28rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 335rem;
+  height: 55rem;
+  background-color: #ffffff;
+  border-radius: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 20rem;
+}
+@media (width >= 900px) {
+  .l-breadcrumb {
+    width: 1100rem;
+    border-radius: 27.5rem;
+    padding-inline: 40rem;
+  }
+}
+.l-breadcrumb__list {
+  display: flex;
+  align-items: center;
+  gap: 24rem;
+}
+.l-breadcrumb__link {
+  font-size: 12rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  opacity: 1;
+}
+.l-breadcrumb__link.is-active {
+  opacity: 0.4;
+}
+.l-breadcrumb__arrow {
+  width: 6rem;
+  margin-top: 4rem;
+}
+.l-breadcrumb__scroll-bar {
+  font-size: 12rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+}
+.l-breadcrumb__scroll-bar::after {
+  content: "";
+  display: block;
+  width: 8rem;
+  aspect-ratio: 1/1;
+  margin-top: 2rem;
+  background-image: url("../images/common/arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotate(90deg);
+}
+
+/* --------------------------------------
   top-fv
 -------------------------------------- */
 .p-top-fv {
@@ -1878,6 +1940,9 @@ body {
 /* --------------------------------------
   entry
 -------------------------------------- */
+.p-entry {
+  position: relative;
+}
 .p-entry__inner {
   padding: 80rem 20rem;
 }
