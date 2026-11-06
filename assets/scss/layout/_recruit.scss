@@ -1,0 +1,181 @@
+@use "../global/" as g;
+
+/* --------------------------------------
+  recruit
+-------------------------------------- */
+.l-recruit {
+	background-image: url("../images/common/l_recruit_bg_sp.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	@include g.media() {
+		background-image: url("../images/common/l_recruit_bg.png");		
+		padding: 116rem 72rem;
+	}
+}
+
+.l-recruit__inner {
+	padding: 73rem 20rem;
+	
+	@include g.media() {
+		background-color: rgba(255,255,255,0.4);
+		padding: 101rem 147rem 67rem;
+		border-radius: 50rem;
+		backdrop-filter: blur(64px);
+	}
+}
+
+.l-recruit__block {
+	background-color: rgba(255,255,255,0.4);
+	backdrop-filter: blur(30px);
+	padding: 44rem 20rem;
+	border-radius: 32rem 32rem 0 0;
+	border: 1px solid rgba(204,204,204,0.4);
+	
+	@include g.media() {
+		border-radius: 0;
+		padding: 0;
+		background-color: transparent;
+		backdrop-filter: none;
+		border: 0;
+	}
+}
+
+.l-recruit__main-title {
+	margin-bottom: 24rem;
+	
+	@include g.media() {
+		margin-bottom: 56rem;
+	}
+}
+
+.l-recruit__content {
+	@include g.media() {
+		display: grid;
+		grid-template-columns: 480rem auto;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 56rem;
+	}
+}
+
+.l-recruit__text {
+	text-align: center;
+	margin-bottom: 14rem;
+	
+	@include g.media() {
+		text-align: left;
+		margin-bottom: 0;
+	}
+}
+
+.l-recruit__title {
+	color: g.$color-red;
+	margin-bottom: 14rem;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 0;
+	
+	@include g.media() {
+		margin-bottom: 3rem;
+	}
+}
+
+.l-recruit__description {
+	
+	@include g.media() {
+		font-size: 18rem;
+	}
+	
+	span {
+		display: block;
+		
+		@include g.media() {
+			display: inline-block;
+		}
+	}
+}
+
+.l-recruit__btn {
+	width: auto;
+	color: g.$color-bg;
+	background-color: transparent;
+	border: 1px solid currentColor;
+	font-size: 16rem;
+	padding-inline: 31rem 14rem;
+	transition: background-color 0.3s, color 0.3s;
+	
+	@include g.media() {
+		gap: 20rem;
+		
+		// hover時、背景を反転
+		&:hover {
+			background-color: g.$color-bg;
+			color: g.$color-white;
+		}
+	}
+}
+
+.l-recruit__btn-arrow {
+	background-color: currentColor;
+	opacity: 1;
+	
+	// 矢印
+	&::before {
+		background-color: g.$color-white;
+	}
+}
+
+.l-recruit__entry-btn {
+	display: grid;
+	grid-template-columns: 150rem 36rem;
+	align-items: center;
+	justify-content: space-between;
+	color: g.$color-white;
+	padding: 30rem 33rem 42rem;
+	background-color: g.$color-bg;
+	border-radius: 0 0 32rem 32rem; 
+	transition: background-color 0.3s;
+	
+	@include g.media() {
+		border-radius: 35rem;
+		padding: 72rem 72rem 72rem 66rem;
+		grid-template-columns: auto 82rem;
+		
+		// hover時、背景を赤に
+		&:hover {
+			background-color: g.$color-red;
+		}
+	}
+}
+
+.l-recruit__entry-btn-title {
+	margin-bottom: 4rem;
+	
+	@include g.media() {
+		margin-bottom: 3rem;
+	}
+}
+
+.l-recruit__entry-btn-description {
+	font-size: 14rem;
+	font-weight: g.$font-weight-medium;
+	line-height: 1.6;
+	letter-spacing: -0.05em;
+	
+	@include g.media() {
+		font-size: 18rem;
+	}
+}
+
+.l-recruit__entry-btn-arrow {
+	width: 100%;
+	
+	@include g.media() {
+		// 矢印
+		&::before {
+			width: 21rem;
+		}
+	}
+}
