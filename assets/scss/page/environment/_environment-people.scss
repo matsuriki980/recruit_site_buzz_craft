@@ -1,0 +1,83 @@
+@use "../../global/" as g;
+
+/* --------------------------------------
+  environment-people
+-------------------------------------- */
+.p-environment-people {
+    background-image: url("../images/environment/environment_people_bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    &__inner {
+        padding: 72rem 20rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        
+        
+        @include g.media() {
+            padding: 190rem 170rem 204rem;
+            align-items: center;
+            grid-template-columns: 550rem 1fr;
+            gap: 24rem 120rem;
+        }
+    }
+    
+    &__title-wrapper {
+        color: g.$color-green;
+        margin-bottom: 32rem;
+        
+        @include g.media() {
+            margin-bottom: 0;
+            grid-column: 1/3;
+            grid-row: 1/2;
+        }
+    }
+    
+    &__content {
+        @include g.media() {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+    }
+    
+    &__lead {
+        font-size: 36rem;
+        font-weight: g.$font-weight-bold;
+        line-height: 1.2;
+        letter-spacing: -0.08em;
+        margin-bottom: 30rem;
+ 
+        @include g.media() {
+            font-size: 42rem;
+        }   
+        
+        span {
+            display: block;
+        }
+    }
+    
+    &__description {
+        font-size: 16rem;
+        font-weight: g.$font-weight-medium;
+        line-height: 2;
+        letter-spacing: -0.05em;
+        margin-bottom: 24rem;
+
+        @include g.media() {
+            font-size: 18rem;
+            margin-bottom: 0;
+        } 
+        
+        span {
+            display: block;
+        }
+    }
+    
+    &__img {
+        @include g.media() {
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }        
+    }
+}
