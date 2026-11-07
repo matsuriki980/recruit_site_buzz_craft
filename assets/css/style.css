@@ -224,12 +224,17 @@ body {
 .c-title__wrapper-line::before {
   content: "";
   display: block;
-  width: 5%;
+  width: 10%;
   height: 2px;
   background-color: currentColor;
   position: absolute;
   bottom: -1px;
   left: 0;
+}
+@media (width >= 900px) {
+  .c-title__wrapper-line::before {
+    width: 5%;
+  }
 }
 
 .c-title-ja {
