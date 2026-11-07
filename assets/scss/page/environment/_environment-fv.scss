@@ -1,0 +1,12 @@
+@use "../../global/" as g;
+
+/* --------------------------------------
+  environment-fv
+-------------------------------------- */
+.p-environment__fv {
+    background-image: url("../images/environment/environment_fv_sp.jpg");
+    
+    @include g.media() {
+       background-image: url("../images/environment/environment_fv.jpg");
+    }
+}
