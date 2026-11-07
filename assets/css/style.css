@@ -2215,6 +2215,63 @@ body {
 }
 
 /* --------------------------------------
+  recruit-guideline
+-------------------------------------- */
+.p-recruit-guideline__inner {
+  padding: 56rem 20rem;
+}
+@media (width >= 900px) {
+  .p-recruit-guideline__inner {
+    padding: 145rem 220rem 120rem;
+  }
+}
+.p-recruit-guideline__title-wrapper {
+  color: #fe8d31;
+}
+.p-recruit-guideline__item {
+  padding-block: 30rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (width >= 900px) {
+  .p-recruit-guideline__item {
+    grid-template-columns: 132rem 1fr;
+    gap: 0;
+    align-items: center;
+  }
+}
+@media (width >= 900px) {
+  .p-recruit-guideline__item--overview, .p-recruit-guideline__item--salary, .p-recruit-guideline__item--employee-benefit {
+    align-items: flex-start;
+  }
+}
+.p-recruit-guideline__title {
+  font-size: 18rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 2;
+}
+.p-recruit-guideline__explanation {
+  font-size: 16rem;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 2;
+}
+.p-recruit-guideline__explanation span {
+  display: block;
+}
+.p-recruit-guideline__explanation__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.p-recruit-guideline__explanation-supplement {
+  display: flex;
+  align-items: center;
+  gap: 12rem;
+}
+
+/* --------------------------------------
   entry
 -------------------------------------- */
 .p-entry {
