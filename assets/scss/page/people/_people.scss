@@ -1,0 +1,214 @@
+@use "../../global/" as g;
+
+/* --------------------------------------
+  people
+-------------------------------------- */
+.p-people__fv {
+    background-image: url("../images/people/people_fv_sp.jpg");
+    
+    @include g.media() {
+       background-image: url("../images/people/people_fv.jpg");
+    }
+}
+
+.p-people {
+    
+    &__inner {
+        padding: 56rem 20rem;
+        
+        @include g.media() {
+            padding: 143rem 173rem 129rem;
+        }
+    }
+    
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 56rem;
+        
+        @include g.media() {
+            gap: 166rem;
+        }
+    }
+    
+    &__item {
+        display: grid;
+        grid-template-columns: 1fr;
+        
+        @include g.media() {
+            gap: 75rem;
+            grid-template-columns: 385rem 1fr;
+            align-items: flex-start;
+        }
+        
+        // 各itemの設定
+        &--first {
+            color: g.$color-purple;
+        }
+        
+        &--second {
+            color: g.$color-orange;
+        }
+        
+        &--third {
+            color: g.$color-accent;
+            
+            @include g.media() {
+              .p-people__graph {
+                 width: 68%;
+              }
+            }
+        }
+    }
+    
+    &__img {
+        margin-bottom: 24rem;
+        
+        @include g.media() {
+            margin-bottom: 0;
+            position: sticky;
+            top: 14%; 
+        }
+    }
+    
+    &__title {
+        font-size: 32rem;
+        font-weight: g.$font-weight-bold;
+        letter-spacing: -0.08em;
+        line-height: 1.25;
+        margin-bottom: 32rem;
+        
+        @include g.media() {
+            font-size: 40rem;
+        }
+        
+        span {
+            display: block;
+        }
+    }
+    
+    &__employee-info {
+      text-align: center;
+      opacity: 0.5;
+    }
+    
+    &__description {
+      font-size: 16rem;
+      line-height: 2.4375;
+      margin-bottom: 32rem; 
+        
+        @include g.media() {
+            font-size: 18rem;
+        }
+    }
+    
+    &__graph {
+      margin-bottom: 70rem;
+    }
+    
+    &__schedule {
+        padding: 56rem 20rem;
+        border-radius: 24rem;
+        border: 1px solid #ccc;
+        
+        @include g.media() {
+            padding: 50rem 90rem;
+        }
+    }
+    
+    &__schedule-title {
+        text-align: center;
+        font-size: 24rem;
+        font-weight: g.$font-weight-bold;
+        letter-spacing: -0.08em;
+        line-height: 1.625;
+        margin-bottom: 25rem;
+    }
+    
+    &__table {
+        display: flex;
+        flex-direction: column;
+        gap: 32rem;
+        position: relative;
+        
+        &::before {
+            content: "";
+            display: block;
+            width: 3rem;
+            height: 100%;
+            background-color: currentColor;
+            opacity: 0.1;
+            position: absolute;
+            left: 2.5rem;
+            top: 5rem;
+            
+                    
+        @include g.media() {
+               left: 80rem;
+        }
+        }
+    }
+    
+    &__table-item {
+        padding-left: 20rem;
+        position: relative;
+        
+                
+        @include g.media() {
+         padding-left: 0;
+            display: flex;
+            align-items: center;
+            gap: 68rem;
+        }
+        
+        // 2行目があるitem
+        &--2line {
+            align-items: flex-start;
+        }
+    }
+    
+    &__table-time {
+        font-size: 16rem;
+        font-weight: g.$font-weight-semibold;
+        font-family: g.$font-family-en;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        
+        @include g.media() {
+            width: 50rem;
+            line-height: 1.8;
+        }
+    }
+    
+    &__table-circle {
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 5.5rem;
+          width: 8rem;
+          aspect-ratio: 1/1;
+          background-color: currentColor;
+          border-radius: 50%;
+          grid-column: 2/3;
+          grid-row: 1/2;
+        
+        @include g.media() {
+            top: 10rem;
+            left: 77.5rem;
+        }
+        }
+    
+    &__table-explanation {
+        font-size: 18rem;
+        font-weight: g.$font-weight-bold;
+        letter-spacing: -0.08em;
+        line-height: 1.5;
+    }
+    
+    // 黒色設定
+    &__employee-info,
+    &__description,
+    &__table-explanation {
+        color: g.$color-bg;
+    }
+}

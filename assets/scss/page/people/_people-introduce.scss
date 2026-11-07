@@ -1,0 +1,74 @@
+@use "../../global/" as g;
+
+/* --------------------------------------
+  people-introduce
+-------------------------------------- */
+.p-people-introduce {
+    color: g.$color-purple;
+    padding: 56rem 20rem 0;
+    
+        @include g.media() {
+           padding: 110rem 48rem 0;
+        }
+    
+    &__inner {
+    background-image: url("../images/people/people_introduce_bg.jpg");
+    background-position: right -145rem top 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 36rem;
+    border: 1px solid #ccc;
+    padding: 56rem 20rem;
+        
+        @include g.media() {
+            background-position: right;
+            padding: 140rem 423rem 140rem 123rem; 
+        }
+    }
+    
+    &__content {
+        @include g.media() {
+            width: 795rem;
+        }
+    }
+    
+    &__title-wrapper {
+        margin-bottom: 10rem;
+    }
+    
+    &__lead {
+        font-size: 32rem;
+        font-weight: g.$font-weight-bold;
+        line-height: 1.25;
+        letter-spacing: -0.08em;
+        margin-bottom: 30rem;
+        
+        @include g.media() {
+            font-size: 56rem;
+        }
+        
+        span {
+            
+            @include g.media() {
+                display: block;
+            }
+        }
+    }
+    
+    &__description {
+        color: g.$color-text;
+        font-size: 16rem;
+        font-weight: g.$font-weight-medium;
+        line-height: 2.166;
+        letter-spacing: -0.05em;
+        
+        @include g.media() {
+            font-size: 18rem;
+            width: 550rem;
+        }
+        
+        span {
+            display: block;
+        }
+    }
+}
