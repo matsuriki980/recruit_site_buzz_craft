@@ -3,6 +3,10 @@
 /* --------------------------------------
   breadcrumb
 -------------------------------------- */
+.l-breadcrumb-relative {
+    position: relative;
+}
+
 .l-breadcrumb {
 	position: absolute;
 	top: -28rem;
@@ -26,7 +30,11 @@
 	&__list {
 		display: flex;
 		align-items: center;
-		gap: 24rem;
+        gap: 12rem;
+        
+        @include g.media() {
+		  gap: 24rem;
+        }
 	}
 	
 	&__link {
@@ -42,8 +50,13 @@
 	}
 	
 	&__arrow {
-		width: 6rem;
-		margin-top: 4rem;
+		width: 8rem;
+		margin-top: 6rem;
+        
+        @include g.media() {
+		  width: 6rem;
+          margin-top: 4rem;
+        }
 	}
 	
 	&__scroll-bar {
