@@ -1,0 +1,129 @@
+@use "../../global/" as g;
+
+/* --------------------------------------
+  recruit-Personality
+-------------------------------------- */
+.p-recruit-personality {
+    
+    &__inner {
+        padding: 0 20rem 56rem;
+        
+        @include g.media() {
+            padding: 0 220rem 200rem;
+        }
+    }
+    
+    &__title-wrapper {
+        color: g.$color-orange;
+        margin-bottom: 62rem;
+    }
+
+    &__item {
+        padding-block: 40rem;
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 32rem;
+        
+        @include g.media() {
+            padding-block: 62rem;
+            align-items: center;
+            grid-template-columns: 430rem 1fr;
+            gap: 70rem;
+        }      
+        
+        // 反転
+        &--reverse {
+            
+            @include g.media() {
+              grid-template-columns: 1fr 430rem;
+            }
+                
+            .p-recruit-personality__img {
+                @include g.media() {
+                    order: 2;
+                }
+            }
+        }
+    }
+    
+    &__img {
+        position: relative;
+        
+        // 装飾
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: -20rem;
+            width: 100vw;
+            height: 91.5%;
+            background-image: url("../images/recruit/recruit_personality_decoration_01.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+            @include g.media() { 
+              width: 516rem;
+              left: -43rem;
+            }
+        }
+        
+        // 2つ目のitem
+        &--second {
+            // 装飾
+            &::before {
+              background-image: url("../images/recruit/recruit_personality_decoration_02.png");
+            }
+        }
+                
+        // 3つ目のitem
+        &--third {
+            // 装飾
+            &::before {
+              background-image: url("../images/recruit/recruit_personality_decoration_03.png");
+            }
+        }
+    }
+    
+    &__title-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 15rem;
+        margin-bottom: 10rem;
+    }
+    
+    &__number {
+        font-size: 32rem;
+        font-family: g.$font-family-en;
+        font-weight: g.$font-weight-medium;
+        opacity: 0.3;
+        
+                
+        @include g.media() {
+            font-size: 48rem;
+        }
+    }
+    
+    &__title {
+        font-size: 24rem;
+        font-weight: g.$font-weight-bold;
+        line-height: 1.625;
+        letter-spacing: -0.08em;
+        color: g.$color-text;
+        
+                
+        @include g.media() {
+         font-size: 28rem;   
+        }
+    }
+    
+    &__description {
+        font-size: 16rem;
+        font-weight: g.$font-weight-medium;
+        line-height: 2;
+        letter-spacing: -0.05em;
+    }
+    
+    
+}

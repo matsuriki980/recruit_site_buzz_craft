@@ -2272,6 +2272,109 @@ body {
 }
 
 /* --------------------------------------
+  recruit-Personality
+-------------------------------------- */
+.p-recruit-personality__inner {
+  padding: 0 20rem 56rem;
+}
+@media (width >= 900px) {
+  .p-recruit-personality__inner {
+    padding: 0 220rem 200rem;
+  }
+}
+.p-recruit-personality__title-wrapper {
+  color: #fe8d31;
+  margin-bottom: 62rem;
+}
+.p-recruit-personality__item {
+  padding-block: 40rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32rem;
+}
+@media (width >= 900px) {
+  .p-recruit-personality__item {
+    padding-block: 62rem;
+    align-items: center;
+    grid-template-columns: 430rem 1fr;
+    gap: 70rem;
+  }
+}
+@media (width >= 900px) {
+  .p-recruit-personality__item--reverse {
+    grid-template-columns: 1fr 430rem;
+  }
+}
+@media (width >= 900px) {
+  .p-recruit-personality__item--reverse .p-recruit-personality__img {
+    order: 2;
+  }
+}
+.p-recruit-personality__img {
+  position: relative;
+}
+.p-recruit-personality__img::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -20rem;
+  width: 100vw;
+  height: 91.5%;
+  background-image: url("../images/recruit/recruit_personality_decoration_01.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (width >= 900px) {
+  .p-recruit-personality__img::before {
+    width: 516rem;
+    left: -43rem;
+  }
+}
+.p-recruit-personality__img--second::before {
+  background-image: url("../images/recruit/recruit_personality_decoration_02.png");
+}
+.p-recruit-personality__img--third::before {
+  background-image: url("../images/recruit/recruit_personality_decoration_03.png");
+}
+.p-recruit-personality__title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15rem;
+  margin-bottom: 10rem;
+}
+.p-recruit-personality__number {
+  font-size: 32rem;
+  font-family: "Hepta Slab", serif;
+  font-weight: 500;
+  opacity: 0.3;
+}
+@media (width >= 900px) {
+  .p-recruit-personality__number {
+    font-size: 48rem;
+  }
+}
+.p-recruit-personality__title {
+  font-size: 24rem;
+  font-weight: 700;
+  line-height: 1.625;
+  letter-spacing: -0.08em;
+  color: #1d1d1d;
+}
+@media (width >= 900px) {
+  .p-recruit-personality__title {
+    font-size: 28rem;
+  }
+}
+.p-recruit-personality__description {
+  font-size: 16rem;
+  font-weight: 500;
+  line-height: 2;
+  letter-spacing: -0.05em;
+}
+
+/* --------------------------------------
   entry
 -------------------------------------- */
 .p-entry {
