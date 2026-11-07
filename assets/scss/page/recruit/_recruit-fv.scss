@@ -1,0 +1,12 @@
+@use "../../global/" as g;
+
+/* --------------------------------------
+  recruit-fv
+-------------------------------------- */
+.p-recruit__fv {
+    background-image: url("../images/recruit/recruit_fv_sp.jpg");
+    
+    @include g.media() {
+       background-image: url("../images/recruit/recruit_fv.jpg");
+    }
+}

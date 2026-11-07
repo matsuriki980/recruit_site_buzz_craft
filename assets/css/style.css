@@ -2231,6 +2231,18 @@ body {
 }
 
 /* --------------------------------------
+  recruit-fv
+-------------------------------------- */
+.p-recruit__fv {
+  background-image: url("../images/recruit/recruit_fv_sp.jpg");
+}
+@media (width >= 900px) {
+  .p-recruit__fv {
+    background-image: url("../images/recruit/recruit_fv.jpg");
+  }
+}
+
+/* --------------------------------------
   recruit-guideline
 -------------------------------------- */
 .p-recruit-guideline__inner {
