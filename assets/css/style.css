@@ -216,6 +216,22 @@ body {
   }
 }
 
+.c-title__wrapper-line {
+  padding-bottom: 20rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.c-title__wrapper-line::before {
+  content: "";
+  display: block;
+  width: 5%;
+  height: 2px;
+  background-color: currentColor;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+}
+
 .c-title-ja {
   font-size: 22rem;
   font-weight: 700;
