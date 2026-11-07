@@ -1,0 +1,71 @@
+@use "../../global/" as g;
+
+/* --------------------------------------
+  recruit-guideline
+-------------------------------------- */
+.p-recruit-guideline {
+    
+    &__inner {
+        padding: 56rem 20rem;
+        
+        @include g.media() {
+          padding: 145rem 220rem 120rem;
+        }
+    }
+    
+    &__title-wrapper {
+        color: g.$color-orange;
+    }
+    
+    &__item {
+        padding-block: 30rem;
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+        display: grid;
+        grid-template-columns: 1fr;
+        
+        @include g.media() {
+            grid-template-columns: 132rem 1fr;
+            gap: 0;
+            align-items: center;
+        }
+        
+        // 複数行のitemは上揃え
+        &--overview,
+        &--salary,
+        &--employee-benefit {
+            
+            @include g.media() {
+                align-items: flex-start;
+            }
+        }
+    }
+    
+    &__title {
+        font-size: 18rem;
+        font-weight: g.$font-weight-bold;
+        letter-spacing: -0.05em;
+        line-height: 2;
+    }
+    
+    &__explanation {
+        font-size: 16rem;
+        font-weight: g.$font-weight-regular;
+        letter-spacing: -0.05em;
+        line-height: 2;
+        
+        span {
+            display: block;
+        }
+        
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    
+    &__explanation-supplement {
+        display: flex;
+        align-items: center;
+        gap: 12rem;
+    }
+}
