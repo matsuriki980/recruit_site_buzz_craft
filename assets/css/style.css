@@ -2772,6 +2772,21 @@ body {
 /* --------------------------------------
   business
 -------------------------------------- */
+.p-business-wrapper {
+  background-image: url("../images/business/business_introduce_bg.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.p-business {
+  padding-bottom: 56rem;
+}
+@media (width >= 900px) {
+  .p-business {
+    padding-bottom: 96rem;
+  }
+}
 .p-business__inner {
   margin-inline: 20rem;
   background-color: rgba(255, 255, 255, 0.6);
