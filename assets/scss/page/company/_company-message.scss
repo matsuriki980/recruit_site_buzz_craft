@@ -1,0 +1,71 @@
+@use "../../global/" as g;
+
+/* --------------------------------------
+  company-message
+-------------------------------------- */
+.p-company-message {
+    padding: 56rem 20rem 0;
+    
+    @include g.media() {
+       padding: 142rem 48rem 0;
+    }
+    
+    &__title-wrapper {
+        color: g.$color-red;        
+        margin-bottom: 14rem;
+        margin-left: 40rem;
+        
+        @include g.media() {
+            margin-left: 85rem;
+        }
+    }
+    
+    &__title-ja {
+        font-size: 24rem;
+    }
+    
+    &__inner {
+       padding: 56rem 20rem;
+       border-radius: 32rem;
+       border: 1px solid #ccc;
+       background-image: url("../images/company/company_message_bg.jpg");
+       background-position: left;
+       background-repeat: no-repeat;
+       background-size: cover;
+        
+      @include g.media() {
+        border-radius: 50rem;
+        padding: 110rem 550rem 110rem 120rem;
+      }       
+    }
+    
+    &__lead {
+        font-size: 32rem;
+        font-weight: g.$font-weight-bold;
+        line-height: 1.2;
+        letter-spacing: -0.08em;
+        color: g.$color-red;
+        margin-bottom: 32rem;
+        
+        @include g.media() {
+            font-size: 42rem;
+            
+            span {
+                display: block;
+            }
+        }        
+    }
+    
+    &__description-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 50rem;
+    }
+    
+    &__description {
+        font-size: 16rem;
+        font-weight: g.$font-weight-medium;
+        line-height: 2;
+        letter-spacing: -0.05em;       
+    }
+}
