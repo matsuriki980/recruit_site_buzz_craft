@@ -1,0 +1,12 @@
+@use "../../global/" as g;
+
+/* --------------------------------------
+  business-fv
+-------------------------------------- */
+.p-business__fv {
+    background-image: url("../images/business/business_fv_sp.jpg");
+    
+    @include g.media() {
+       background-image: url("../images/business/business_fv.jpg");
+    }
+}

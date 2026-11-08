@@ -1,0 +1,71 @@
+@use "../../global/" as g;
+
+/* --------------------------------------
+  business-introduce
+-------------------------------------- */
+.p-business-introduce {
+    color: g.$color-accent;
+    
+    &__inner {
+        padding: 56rem 20rem;
+        
+        @include g.media() {
+           padding: 110rem 170rem 56rem;
+           display: grid;
+           grid-template-columns: 464rem 1fr;
+           gap: 64rem;
+            align-items: center;
+        }
+    }
+    
+    &__content {
+        @include g.media() {
+            order: 2;
+        }
+    }
+    
+    &__title-wrapper {
+        margin-bottom: 10rem;
+    }
+    
+    &__lead {
+        font-size: 32rem;
+        font-weight: g.$font-weight-bold;
+        line-height: 1.25;
+        letter-spacing: -0.08em;
+        margin-bottom: 30rem;
+        
+        @include g.media() {
+            font-size: 56rem;
+        }
+        
+        span {
+            
+            @include g.media() {
+                display: block;
+            }
+        }
+    }
+    
+    &__description {
+        color: g.$color-text;
+        font-size: 16rem;
+        font-weight: g.$font-weight-medium;
+        line-height: 2.166;
+        letter-spacing: -0.05em;
+        margin-bottom: 24rem;
+        
+        @include g.media() {
+            font-size: 18rem;
+            width: 550rem;
+        }
+        
+        span {
+            display: block;
+        }
+    }
+    
+    &__img {
+        order: 1;
+    }
+}
