@@ -1,0 +1,50 @@
+@use "../global/" as g;
+
+/* --------------------------------------
+  pagination-btn
+-------------------------------------- */
+
+.c-pagination-btn {
+  width: 42rem;
+  aspect-ratio: 1/1;
+  background-color: g.$color-bg;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  transition: opacity 0.3s;
+    
+  @include g.media() {
+    width: 60rem;
+  }
+
+  // 矢印
+  &::before {
+    content: "";
+    display: block;
+    width: 8.4rem;
+    aspect-ratio: 1/1;
+    mask-image: url(../images/common/arrow.svg);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    background-color: g.$color-white;
+
+    @include g.media() {
+      width: 12rem;
+    }
+  }
+    
+    // prev 
+    &--prev {
+        transform: scaleX(-1);
+    }
+    
+    // hover時、opacityを70%にする    
+    &:hover {
+        
+       @include g.media() {
+         opacity: 0.7
+       }
+    }
+}
