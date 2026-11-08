@@ -144,4 +144,25 @@
             }
         }
     }
+    
+    &__lead {
+        color: g.$color-accent;
+        text-align: center;
+        font-size: 24rem;
+        font-weight: g.$font-weight-bold;
+        line-height: 1.4;
+        letter-spacing: -0.08em;  
+        padding-bottom: 56rem;
+        padding-inline: 20rem;
+        
+        @include g.media() {
+            font-size: 32rem;
+            padding-bottom: 160rem;
+        
+                
+        span {
+            display: block;
+        }
+        }
+    }
 }

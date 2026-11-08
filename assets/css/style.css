@@ -2899,6 +2899,25 @@ body {
     left: -20rem;
   }
 }
+.p-business__lead {
+  color: #3897f1;
+  text-align: center;
+  font-size: 24rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.08em;
+  padding-bottom: 56rem;
+  padding-inline: 20rem;
+}
+@media (width >= 900px) {
+  .p-business__lead {
+    font-size: 32rem;
+    padding-bottom: 160rem;
+  }
+  .p-business__lead span {
+    display: block;
+  }
+}
 
 /* --------------------------------------
   entry
