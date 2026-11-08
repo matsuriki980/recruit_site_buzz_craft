@@ -1,0 +1,108 @@
+@use "../../global/" as g;
+
+/* --------------------------------------
+  company-data
+-------------------------------------- */
+.p-company-data {
+    color: g.$color-red;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ccc;
+    
+    &__inner {
+        padding: 56rem 20rem 72rem;
+        
+        @include g.media() {
+            padding: 90rem 170rem 125rem;
+        }
+    }
+    
+    &__title-wrapper {
+        margin-bottom: 45rem;
+    }
+    
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16rem;
+        
+        @include g.media() {
+              grid-template-columns: repeat(6, minmax(0, 1fr));
+        }
+    }
+    
+    &__item {
+        padding: 15rem 20rem;
+        border-radius: 10rem;
+        background-color: g.$color-white;
+        color: g.$color-text;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        &--top {
+            
+          // 上段
+          @include g.media() {
+            grid-column: span 2;
+              
+          }
+            
+            .p-company-data__item-title {
+                
+                @include g.media() {
+                    margin-bottom: 24rem;
+                }
+            }
+        }
+        
+        &--bottom {
+            
+          // 下段
+          @include g.media() {
+                grid-column: span 3;
+              
+              .p-company-data__item-graph {
+                  width: 218rem;
+                  margin-top: -32rem;
+              }
+          }
+        }
+    }
+    
+    &__item-title {
+        font-size: 18rem;
+        font-weight: g.$font-weight-bold;
+        line-height: 2;
+        letter-spacing: -0.05em; 
+        margin-bottom: 24rem;
+        display: flex;
+        align-items: center;
+        gap: 12rem;    
+        
+        @include g.media() {
+            margin-bottom: 0;
+        }
+                
+        // 装飾
+        &::before {
+            content: "";
+            display: block;
+            margin-top: 3rem;
+            width: 12rem;
+            height: 20rem;
+            mask-image: url("../images/company/company_data_decoration.svg");
+            mask-position: center;
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            background-color: g.$color-red;
+        }
+    }
+    
+    &__item-graph {
+       
+        @include g.media() {
+            width: 276rem;
+            margin: 0 auto 0;
+        }        
+    }
+}
