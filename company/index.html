@@ -34,7 +34,7 @@
 <body>
 
 <!-- header -->
-<header class="l-header">
+<header class="l-header l-header--sub-page js-header">
     <div class="l-header__inner"> 
         
         <!-- logo -->
@@ -53,12 +53,12 @@
         </nav>
         
         <!-- hamburger-btn -->
-        <button class="l-header__hamburger-btn u-pc-hidden" aria-label="メニューを開く"> <span></span> <span></span> </button>
+        <button class="l-header__hamburger-btn u-pc-hidden js-hamburger__btn" aria-label="メニューを開く"> <span></span> <span></span> </button>
     </div>
 </header>
 
 <!-- hamburger-menu -->
-<nav class="l-hamburger-menu u-pc-hidden" aria-label="ハンバーガーメニュー">
+<nav class="l-hamburger-menu u-pc-hidden js-hamburger-menu" aria-label="ハンバーガーメニュー">
     <ul class="l-hamburger-menu__list">
         
         <!-- people -->
@@ -93,7 +93,7 @@
             </div>
         </div>
     </section>
-    <div class="l-breadcrumb-relative"> 
+    <div class="l-breadcrumb-relative js-header__scroll-trigger"> 
         
         <!-- パンくずリスト -->
         <div class="l-breadcrumb">
@@ -360,5 +360,8 @@
         <!-- copy-right --> 
         <small class="l-footer__copyright">© BuzzCraft Co., Ltd.</small> </div>
 </footer>
+
+<!-- ja読み込み -->
+<script src="../assets/js/main.js" type="module"></script>
 </body>
 </html>

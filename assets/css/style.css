@@ -547,8 +547,9 @@ body {
 .l-hamburger-menu {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.61);
+  background-color: rgba(255, 255, 255, 0.9);
   position: fixed;
+  z-index: 20;
   top: 0;
   left: 0;
   padding: 150rem 32rem 130rem;
