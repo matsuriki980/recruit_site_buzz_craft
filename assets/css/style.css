@@ -2999,6 +2999,63 @@ body {
 }
 
 /* --------------------------------------
+  company-benefits
+-------------------------------------- */
+.p-company-benefits {
+  color: #ed0012;
+}
+.p-company-benefits__inner {
+  padding: 56rem 20rem 72rem;
+}
+@media (width >= 900px) {
+  .p-company-benefits__inner {
+    padding: 90rem 170rem 125rem;
+  }
+}
+.p-company-benefits__list {
+  color: #1d1d1d;
+}
+@media (width >= 900px) {
+  .p-company-benefits__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 64rem;
+  }
+}
+.p-company-benefits__item {
+  padding-block: 30rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+@media (width >= 900px) {
+  .p-company-benefits__item {
+    display: grid;
+    grid-template-columns: 130rem 1fr;
+    align-items: center;
+    padding-block: 24rem;
+  }
+}
+.p-company-benefits__item span {
+  display: block;
+}
+@media (width >= 900px) {
+  .p-company-benefits__item--2line {
+    align-items: flex-start;
+  }
+}
+.p-company-benefits__item-title {
+  font-size: 18rem;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: -0.05em;
+}
+.p-company-benefits__item-description {
+  font-size: 16rem;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: -0.05em;
+}
+
+/* --------------------------------------
   entry
 -------------------------------------- */
 .p-entry {
