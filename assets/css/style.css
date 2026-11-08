@@ -3056,6 +3056,97 @@ body {
 }
 
 /* --------------------------------------
+  company-data
+-------------------------------------- */
+.p-company-data {
+  color: #ed0012;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ccc;
+}
+.p-company-data__inner {
+  padding: 56rem 20rem 72rem;
+}
+@media (width >= 900px) {
+  .p-company-data__inner {
+    padding: 90rem 170rem 125rem;
+  }
+}
+.p-company-data__title-wrapper {
+  margin-bottom: 45rem;
+}
+.p-company-data__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16rem;
+}
+@media (width >= 900px) {
+  .p-company-data__list {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+.p-company-data__item {
+  padding: 15rem 20rem;
+  border-radius: 10rem;
+  background-color: #ffffff;
+  color: #1d1d1d;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (width >= 900px) {
+  .p-company-data__item--top {
+    grid-column: span 2;
+  }
+}
+@media (width >= 900px) {
+  .p-company-data__item--top .p-company-data__item-title {
+    margin-bottom: 24rem;
+  }
+}
+@media (width >= 900px) {
+  .p-company-data__item--bottom {
+    grid-column: span 3;
+  }
+  .p-company-data__item--bottom .p-company-data__item-graph {
+    width: 218rem;
+    margin-top: -32rem;
+  }
+}
+.p-company-data__item-title {
+  font-size: 18rem;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: -0.05em;
+  margin-bottom: 24rem;
+  display: flex;
+  align-items: center;
+  gap: 12rem;
+}
+@media (width >= 900px) {
+  .p-company-data__item-title {
+    margin-bottom: 0;
+  }
+}
+.p-company-data__item-title::before {
+  content: "";
+  display: block;
+  margin-top: 3rem;
+  width: 12rem;
+  height: 20rem;
+  mask-image: url("../images/company/company_data_decoration.svg");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  background-color: #ed0012;
+}
+@media (width >= 900px) {
+  .p-company-data__item-graph {
+    width: 276rem;
+    margin: 0 auto 0;
+  }
+}
+
+/* --------------------------------------
   entry
 -------------------------------------- */
 .p-entry {
