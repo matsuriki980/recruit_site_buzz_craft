@@ -2770,6 +2770,122 @@ body {
 }
 
 /* --------------------------------------
+  business
+-------------------------------------- */
+.p-business__inner {
+  margin-inline: 20rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 32rem;
+  border: 1px solid #ccc;
+  padding: 56rem 20rem;
+}
+@media (width >= 900px) {
+  .p-business__inner {
+    margin-inline: 48rem;
+    padding: 96rem 120rem;
+    border-radius: 50rem;
+  }
+}
+.p-business__item {
+  padding-bottom: 56rem;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.4);
+}
+@media (width >= 900px) {
+  .p-business__item {
+    display: grid;
+    grid-template-columns: 595rem 1fr;
+    align-items: center;
+    gap: 75rem;
+  }
+}
+.p-business__item .p-business__content-category {
+  font-size: 16rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.875;
+  letter-spacing: -0.05em;
+  display: inline-block;
+  padding: 3rem 28rem;
+  background-color: #71bf51;
+  border-radius: 19.5rem;
+  margin-bottom: 12rem;
+}
+.p-business__item--second {
+  padding-bottom: 0;
+  padding-top: 56rem;
+  border-bottom: 0;
+}
+@media (width >= 900px) {
+  .p-business__item--second .p-business__content {
+    order: 2;
+  }
+}
+@media (width >= 900px) {
+  .p-business__item--second .p-business__img {
+    order: 1;
+  }
+}
+.p-business__item--second .p-business__img::before {
+  background-image: url("../images/business/business_introduce_decoration_02.png");
+}
+@media (width >= 900px) {
+  .p-business__item--second {
+    grid-template-columns: 1fr 595rem;
+  }
+}
+.p-business__item--second .p-business__content-category {
+  background-color: #3897f1;
+}
+.p-business__content-head {
+  margin-bottom: 20rem;
+}
+.p-business__title {
+  font-size: 24rem;
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -0.08em;
+}
+@media (width >= 900px) {
+  .p-business__title {
+    font-size: 32rem;
+  }
+}
+.p-business__description {
+  font-size: 16rem;
+  font-weight: 500;
+  line-height: 2;
+  letter-spacing: -0.05em;
+  margin-bottom: 40rem;
+}
+.p-business__description span {
+  display: block;
+}
+.p-business__img {
+  position: relative;
+}
+.p-business__img::before {
+  content: "";
+  display: block;
+  width: 100vw;
+  height: 97%;
+  background-image: url("../images/business/business_introduce_decoration_01.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: -41rem;
+  transform: translateY(-50%);
+}
+@media (width >= 900px) {
+  .p-business__img::before {
+    width: 110%;
+    height: 90%;
+    left: -20rem;
+  }
+}
+
+/* --------------------------------------
   entry
 -------------------------------------- */
 .p-entry {
