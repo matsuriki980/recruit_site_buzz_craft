@@ -1,0 +1,64 @@
+@use "../../global/" as g;
+
+/* --------------------------------------
+  company-benefits
+-------------------------------------- */
+.p-company-benefits {
+    color: g.$color-red;
+    
+    &__inner {
+        padding: 56rem 20rem 72rem;
+        
+        @include g.media() {
+            padding: 90rem 170rem 125rem;
+        }
+    }
+    
+    &__list {
+        color: g.$color-text;
+        
+        @include g.media() {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 0 64rem;
+        }
+    }
+    
+    &__item {
+        padding-block: 30rem;
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+        
+        @include g.media() {
+            display: grid;
+            grid-template-columns: 130rem 1fr;
+            align-items: center;
+            padding-block: 24rem;            
+        }        
+        
+        span {
+            display: block;
+        }
+        
+        // ddが2行のitemは上揃え
+        &--2line {
+            
+            @include g.media() {
+                align-items: flex-start;
+            }            
+        }
+    }
+    
+    &__item-title {
+        font-size: 18rem;
+        font-weight: g.$font-weight-bold;
+        line-height: 2;
+        letter-spacing: -0.05em;        
+    }
+    
+    &__item-description {
+        font-size: 16rem;
+        font-weight: g.$font-weight-regular;
+        line-height: 2;
+        letter-spacing: -0.05em;
+    }
+}
