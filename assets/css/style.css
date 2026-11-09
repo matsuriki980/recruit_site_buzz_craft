@@ -639,16 +639,6 @@ body {
   overflow: hidden;
 }
 
-.l-company__slider-list {
-  display: grid;
-  grid-template-columns: repeat(4, 205rem);
-}
-@media (width >= 900px) {
-  .l-company__slider-list {
-    grid-template-columns: repeat(4, 440rem);
-  }
-}
-
 /* --------------------------------------
   recruit
 -------------------------------------- */

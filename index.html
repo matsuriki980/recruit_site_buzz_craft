@@ -391,7 +391,8 @@
       <div class="l-company__slider-wrapper p-top-company__slider-wrapper">
 
         <!-- 1つ目のスライダー -->
-        <div class="splide l-company__slider p-top-company__slider" role="group" aria-label="Splideの基本的なHTML">
+        <div class="splide l-company__slider p-top-company__slider js-l-company__slider" role="group"
+          aria-label="Splideの基本的なHTML">
           <div class="splide__track l-company__slider-track p-top-company__slider-track">
             <ul class="splide__list l-company__slider-list p-top-company__slider-list">
               <li class="splide__slide l-company__slider-slide p-top-company__slider-slide"> <img
@@ -407,8 +408,9 @@
         </div>
 
         <!-- 2つ目のスライダー -->
-        <div class="splide l-company__slider--reverse p-top-company__slider--reverse" role="group"
-          aria-label="Splideの基本的なHTML">
+        <div
+          class="splide l-company__slider--reverse p-top-company__slider--reverse js-l-company__slider js-l-company__slider--reverse"
+          role="group" aria-label="Splideの基本的なHTML">
           <div class="splide__track l-company__slider-track p-top-company__slider-track">
             <ul class="splide__list l-company__slider-list p-top-company__slider-list">
               <li class="splide__slide l-company__slider-slide p-top-company__slider-slide"> <img
@@ -568,17 +570,8 @@
         </a>
       </div>
     </section>
-
-    <!-- c-title 
-        <div class="c-title__wrapper">
-            <h2 class="c-title-ja">社員を知る</h2>
-            <p class="c-title-en">people</p>
-        </div>
-        -->
-
-    <!-- btn 
-        <a href="" class="c-btn">社員について詳しく見る<span class="c-arrow c-btn-arrow"></span></a>
-        -->
+    <a href="" class="c-btn">社員について詳しく見る<span class="c-arrow c-btn-arrow"></span></a>
+    -->
   </main>
 
   <!-- footer -->
@@ -632,6 +625,7 @@
 
   <!-- splide読み込み -->
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js" defer></script>
 
   <!-- ja読み込み -->
   <script src="assets/js/main.js" type="module"></script>

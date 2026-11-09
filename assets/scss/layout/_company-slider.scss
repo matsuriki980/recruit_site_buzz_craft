@@ -11,12 +11,3 @@
 .l-company__slider-track {
 	overflow: hidden;
 }
-
-.l-company__slider-list {
-	display: grid;
-	grid-template-columns: repeat(4,205rem);
-	
-	@include g.media() {
-		grid-template-columns: repeat(4,440rem);
-	}
-}
