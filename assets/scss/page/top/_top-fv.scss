@@ -66,6 +66,12 @@
 }
 
 .p-top-fv__title-char {
+  opacity: 0;
+  transition: opacity 0.5s;
+
+  &.is-active {
+    opacity: 1;
+  }
 }
 
 .p-top-fv__title-char--01 {
