@@ -4,93 +4,82 @@
   environment-oficce
 -------------------------------------- */
 .p-environment-oficce {
-    
-    &__inner {
-        padding: 56rem 0 72rem;
-        position: relative;
-        
-        @include g.media() {
-            padding: 0 0 180rem;
-        }
-    }
-    
-    &__title-wrapper {
-        color: g.$color-green;
-        margin-bottom: 45rem;
-        margin-inline: 20rem;
+  &__inner {
+    padding: 56rem 0 72rem;
+    position: relative;
 
-        @include g.media() {
-           margin-inline: 170rem;
-        }
+    @include g.media() {
+      padding: 0 0 180rem;
     }
-    
-        
-    &__slider {
-        overflow: hidden;
-        margin-bottom: 40rem;
-    }
-    
-    &__slider-list {
-        display: grid;
-        grid-template-columns: repeat(4,268rem);
-        width: 100vw;
-        gap: 14rem;
+  }
 
-        @include g.media() {
-           grid-template-columns: repeat(4,820rem);
-        }      
-    }
-    
-    &__slider-item {
-        opacity: 0.4;
-        
-        &.is-active {
-            opacity: 1;
-        }
-    }
-    
-    &__pagination-btn {
-        top: 216rem;
-        
-           @include g.media() {
-            top: 328rem;
-        }     
-    }
-    
-    &__pagination-btn--next {
-        right: 9rem;
- 
-        @include g.media() {
-            right: 280rem;
-        }
-    }
-    
-    &__pagination-btn--prev {
-      right: auto;
-      left: 9rem;
+  &__title-wrapper {
+    color: g.$color-green;
+    margin-bottom: 45rem;
+    margin-inline: 20rem;
 
-      @include g.media() {
-        left: 280rem;
+    @include g.media() {
+      margin-inline: 170rem;
+    }
+  }
+
+  &__slider {
+    overflow: hidden;
+    margin-bottom: 40rem;
+  }
+
+  &__slider-item {
+    opacity: 0.4;
+    transition: opacity 0.3s;
+
+    &.is-active {
+      opacity: 1;
+    }
+  }
+
+  &__pagination-btn {
+    top: 216rem;
+
+    @include g.media() {
+      top: 328rem;
+    }
+  }
+
+  &__pagination-btn--next {
+    right: 9rem;
+
+    @include g.media() {
+      right: 280rem;
+    }
+  }
+
+  &__pagination-btn--prev {
+    right: auto;
+    left: 9rem;
+
+    @include g.media() {
+      left: 280rem;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+
+    // dot
+    &-dot {
+      width: 10rem;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      opacity: 0.3;
+      background-color: g.$color-bg;
+      transition: opacity 0.3s;
+
+      &.is-active {
+        opacity: 1;
       }
     }
-    
-    &__pagination {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10rem;
-        
-        // dot
-        &-dot {
-            width: 10rem;
-            aspect-ratio: 1/1;
-            border-radius: 50%;
-            opacity: 0.3;
-            background-color: g.$color-bg;
-            
-            &.is-active {
-                opacity: 1;
-            }
-        }
-    }
+  }
 }
