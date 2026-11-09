@@ -1214,6 +1214,14 @@ body {
   }
 }
 
+.p-top-fv__title-char {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.p-top-fv__title-char.is-active {
+  opacity: 1;
+}
+
 .p-top-fv__title-char--01 {
   width: 132rem;
 }
