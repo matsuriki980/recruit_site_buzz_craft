@@ -3,9 +3,9 @@
 /* --------------------------------------
   top-people
 -------------------------------------- */
-
 .p-top-people {
   color: g.$color-purple;
+  overflow: hidden;
 }
 
 .p-top-people__inner {
@@ -19,22 +19,35 @@
 .p-top-people__slider {
   position: relative;
   margin-bottom: 39rem;
+  overflow: visible;
 
   @include g.media() {
     margin-bottom: 43rem;
   }
 }
 
-.p-top-people__list {
-}
-
 .p-top-people__item {
+  filter: saturate(0);
+  transition: filter 0.3s;
+
   @include g.media() {
     display: grid;
     grid-template-columns: 383rem 511rem;
     justify-content: space-between;
     align-items: center;
     padding-inline: 24rem 53rem;
+  }
+
+  &--second {
+    color: g.$color-orange;
+  }
+
+  &--third {
+    color: g.$color-accent;
+  }
+
+  &.is-active {
+    filter: saturate(1);
   }
 }
 
@@ -45,12 +58,6 @@
   @include g.media() {
     width: 100%;
   }
-}
-
-.p-top-people__content {
-}
-
-.p-top-people__text {
 }
 
 .p-top-people__employee-info {
@@ -81,9 +88,6 @@
   span {
     display: block;
   }
-}
-
-.p-top-people__graph {
 }
 
 .p-top-people__pagination {

@@ -1494,6 +1494,7 @@ body {
 -------------------------------------- */
 .p-top-people {
   color: #a407ba;
+  overflow: hidden;
 }
 
 .p-top-people__inner {
@@ -1508,6 +1509,7 @@ body {
 .p-top-people__slider {
   position: relative;
   margin-bottom: 39rem;
+  overflow: visible;
 }
 @media (width >= 900px) {
   .p-top-people__slider {
@@ -1515,6 +1517,10 @@ body {
   }
 }
 
+.p-top-people__item {
+  filter: saturate(0);
+  transition: filter 0.3s;
+}
 @media (width >= 900px) {
   .p-top-people__item {
     display: grid;
@@ -1523,6 +1529,15 @@ body {
     align-items: center;
     padding-inline: 24rem 53rem;
   }
+}
+.p-top-people__item--second {
+  color: #fe8d31;
+}
+.p-top-people__item--third {
+  color: #3897f1;
+}
+.p-top-people__item.is-active {
+  filter: saturate(1);
 }
 
 .p-top-people__img {

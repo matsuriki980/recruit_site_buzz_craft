@@ -1,549 +1,640 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>トップページ | BuzzCraft</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>トップページ | BuzzCraft</title>
 
-<!-- 実案件ではないため設定 -->
-<meta name="robots" content="noindex,nofollow">
+  <!-- 実案件ではないため設定 -->
+  <meta name="robots" content="noindex,nofollow">
 
-<!-- OGP設定 -->
-<meta property="og:url" content="https://matsuyamarikiya.jp/recruit_site_buzz_craft/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="トップページ | BuzzCraft">
-<meta property="og:description"
-        content="東京を拠点とするBuzzCraftは、SNSの波を操り、トレンドを創り出すクリエイター集団。数字とアイデアが交差する場所で、常に新しい挑戦を続けています。">
-<meta property="og:site_name" content="BuzzCraft">
+  <!-- OGP設定 -->
+  <meta property="og:url" content="https://matsuyamarikiya.jp/recruit_site_buzz_craft/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="トップページ | BuzzCraft">
+  <meta property="og:description"
+    content="東京を拠点とするBuzzCraftは、SNSの波を操り、トレンドを創り出すクリエイター集団。数字とアイデアが交差する場所で、常に新しい挑戦を続けています。">
+  <meta property="og:site_name" content="BuzzCraft">
 
-<!-- ファビコン -->
-<link rel="icon" href="assets/images/common/favicon.ico">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/images/common/favicon.ico">
+  <!-- ファビコン -->
+  <link rel="icon" href="assets/images/common/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/common/favicon.ico">
 
-<!-- google fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-        href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP&display=swap"
-        rel="stylesheet">
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP&display=swap"
+    rel="stylesheet">
 
-<!-- css -->
-<link rel="stylesheet" href="assets/css/style.css">
+  <!-- splide読み込み -->
+  <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+
+  <!-- css -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-<!-- header -->
-<header class="l-header l-header--top js-header">
-  <div class="l-header__inner"> 
-    
-    <!-- logo -->
-    <h1 class="l-header__logo"> <a href="" class="u-link"> <img src="assets/images/common/logo.svg" alt="BuzzCraft" width="110" height="18"> </a> </h1>
-    
-    <!-- nav -->
-    <nav class="l-header__nav u-sp-hidden">
-      <ul class="l-header__list">
-        <li class="l-header__item"><a href="people/" class="l-header__link u-underline">社員を知る</a></li>
-        <li class="l-header__item"><a href="business/" class="l-header__link u-underline">仕事を知る</a></li>
-        <li class="l-header__item"><a href="company/" class="l-header__link u-underline">会社を知る</a></li>
-        <li class="l-header__item"><a href="environment/" class="l-header__link u-underline">環境を知る</a></li>
-        <li class="l-header__item"><a href="recruit/" class="l-header__link u-underline">採用情報を知る</a></li>
-        <li class="l-header__item l-header__item--entry"><a href="entry/" class="l-header__link">エントリーする</a> </li>
-      </ul>
-    </nav>
-    
-    <!-- hamburger-btn -->
-    <button class="l-header__hamburger-btn u-pc-hidden js-hamburger__btn" aria-label="メニューを開く"> <span></span> <span></span> </button>
-  </div>
-</header>
+  <!-- header -->
+  <header class="l-header l-header--top js-header">
+    <div class="l-header__inner">
 
-<!-- hamburger-menu -->
-<nav class="l-hamburger-menu u-pc-hidden js-hamburger-menu" aria-label="ハンバーガーメニュー">
-  <ul class="l-hamburger-menu__list">
-    
-    <!-- people -->
-    <li class="l-hamburger-menu__item"> <a href="people/" class="l-hamburger-menu__link"> <span class="l-hamburger-menu__link-text">社員を知る<span
-                            class="l-hamburger-menu__link-text-en">people</span></span> <span class="l-hamburger-menu__link-arrow c-arrow"></span> </a> </li>
-    
-    <!-- business -->
-    <li class="l-hamburger-menu__item"> <a href="business/" class="l-hamburger-menu__link"> <span class="l-hamburger-menu__link-text">仕事を知る<span
-                            class="l-hamburger-menu__link-text-en">business</span></span> <span class="l-hamburger-menu__link-arrow c-arrow"></span> </a> </li>
-    
-    <!-- company -->
-    <li class="l-hamburger-menu__item"> <a href="company/" class="l-hamburger-menu__link"> <span class="l-hamburger-menu__link-text">会社を知る<span
-                            class="l-hamburger-menu__link-text-en">company</span></span> <span class="l-hamburger-menu__link-arrow c-arrow"></span> </a> </li>
-    
-    <!-- environment -->
-    <li class="l-hamburger-menu__item"> <a href="environment/" class="l-hamburger-menu__link"> <span class="l-hamburger-menu__link-text">環境を知る<span
-                            class="l-hamburger-menu__link-text-en">environment</span></span> <span class="l-hamburger-menu__link-arrow c-arrow"></span> </a> </li>
-    
-    <!-- recruit -->
-    <li class="l-hamburger-menu__item"> <a href="recruit/" class="l-hamburger-menu__link"> <span class="l-hamburger-menu__link-text">採用情報を知る<span
-                            class="l-hamburger-menu__link-text-en">recruit info</span></span> <span class="l-hamburger-menu__link-arrow c-arrow"></span> </a> </li>
-    
-    <!-- entry -->
-    <li class="l-hamburger-menu__item l-hamburger-menu__item--entry"> <a href="entry/" class="l-hamburger-menu__link">エントリーする</a> </li>
-  </ul>
-</nav>
-<main> 
-  
-  <!-- p-top-fv -->
-  <section class="p-top-fv">
-    <div class="p-top-fv__inner"> 
-      
-      <!-- title -->
-      <div class="p-top-fv__title-wrapper"> 
-        
-        <!-- sp版は改行しない -->
-        <h2 class="p-top-fv__title-ja p-top-fv__title-ja--pc js-chars-gsap" aria-label="topページ fvタイトル"> 
-          
-          <!-- 「次」 --> 
-          <span class="p-top-fv__title-char p-top-fv__title-char--01 js-char"><img
-                                src="assets/images/top/top_fv_title_char_01.png" alt="次" width="133"
-                                height="130"></span> 
-          
-          <!-- 「は」 --> 
-          <span class="p-top-fv__title-char p-top-fv__title-char--02 js-char"><img
-                                src="assets/images/top/top_fv_title_char_02.png" alt="は" width="82" height="78"></span> 
-          
-          <!-- 「、」 --> 
-          <span class="p-top-fv__title-char p-top-fv__title-char--03 js-char"><img
-                                src="assets/images/top/top_fv_title_char_03.png" alt="、" width="21" height="23"></span> 
-          
-          <!-- 「き」 --> 
-          <span class="p-top-fv__title-char p-top-fv__title-char--04 js-char"><img
-                                src="assets/images/top/top_fv_title_char_04.png" alt="き" width="103"
-                                height="129"></span> 
-          
-          <!-- 「み」 --> 
-          <span class="p-top-fv__title-char p-top-fv__title-char--05 js-char"><img
-                                src="assets/images/top/top_fv_title_char_05.png" alt="み" width="137"
-                                height="117"></span> 
-          
-          <!-- 「だ」 --> 
-          <span class="p-top-fv__title-char p-top-fv__title-char--06 js-char"><img
-                                src="assets/images/top/top_fv_title_char_06.png" alt="だ" width="80" height="80"></span> 
-          
-          <!-- 「。」 --> 
-          <span class="p-top-fv__title-char p-top-fv__title-char--07 js-char"><img
-                                src="assets/images/top/top_fv_title_char_07.png" alt="。" width="27" height="27"></span> </h2>
-        
-        <!-- sp版は改行する -->
-        <h2 class="p-top-fv__title-ja p-top-fv__title-ja--sp js-chars-gsap" aria-label="topページ fvタイトル"> 
-          
-          <!-- 1行目 --> 
-          <span class="p-top-fv__title-char-block"> 
-          
-          <!-- 「次」 --> 
-          <span class="p-top-fv__title-char p-top-fv__title-char--01 js-char"><img
-                                    src="assets/images/top/top_fv_title_char_01.png" alt="次" width="133"
-                                    height="130"></span> 
-          
-          <!-- 「は」 --> 
-          <span class="p-top-fv__title-char p-top-fv__title-char--02 js-char"><img
-                                    src="assets/images/top/top_fv_title_char_02.png" alt="は" width="82"
-                                    height="78"></span> 
-          
-          <!-- 「、」 --> 
-          <span class="p-top-fv__title-char p-top-fv__title-char--03 js-char"><img
-                                    src="assets/images/top/top_fv_title_char_03.png" alt="、" width="21"
-                                    height="23"></span> </span> 
-          
-          <!-- 2行目 --> 
-          <span class="p-top-fv__title-char-block"> 
-          <!-- 「き」 --> 
-          <span class="p-top-fv__title-char p-top-fv__title-char--04 js-char"><img
-                                    src="assets/images/top/top_fv_title_char_04.png" alt="き" width="103"
-                                    height="129"></span> 
-          
-          <!-- 「み」 --> 
-          <span class="p-top-fv__title-char p-top-fv__title-char--05 js-char"><img
-                                    src="assets/images/top/top_fv_title_char_05.png" alt="み" width="137"
-                                    height="117"></span> 
-          
-          <!-- 「だ」 --> 
-          <span class="p-top-fv__title-char p-top-fv__title-char--06 js-char"><img
-                                    src="assets/images/top/top_fv_title_char_06.png" alt="だ" width="80"
-                                    height="80"></span> 
-          
-          <!-- 「。」 --> 
-          <span class="p-top-fv__title-char p-top-fv__title-char--07 js-char"><img
-                                    src="assets/images/top/top_fv_title_char_07.png" alt="。" width="27"
-                                    height="27"></span> </span> </h2>
-        <p class="p-top-fv__title-en">join us</p>
-      </div>
-      
-      <!-- p-top-fv-news -->
-      <article class="p-top-fv__news">
-        <div class="p-top-fv__news-inner"> 
-          <!-- title -->
-          <h3 class="p-top-fv__news-title">news</h3>
-          
-          <!-- content -->
-          <div class="p-top-fv__news-content">
-            <p class="p-top-fv__news-time">
-              <time datetime="2026-11-04">2026.11.04</time>
-            </p>
-            <h4 class="p-top-fv__news-content-title">2026年度の採用募集は終了しました</h4>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-  
-  <!-- p-top-about -->
-  <section class="p-top-about js-header__scroll-trigger"> 
-    
-    <!-- background -->
-    <div class="p-top-about__background" aria-hidden="true"></div>
-    <div class="p-top-about__inner"> 
-      
-      <!-- title -->
-      <h2 class="p-top-about__title" aria-label="topページ aboutセクション 見出し"> <img src="assets/images/top/top_about_title.png" alt="topページ aboutセクション 見出し" width="112"
-                        height="380"> </h2>
-      
-      <!-- text -->
-      <div class="p-top-about__content">
-        <div class="p-top-about__text">
-          <h3 class="p-top-about__heading">SNSで新しい可能性を切り拓く。</h3>
-          <p class="p-top-about__description"> <span>BuzzCraftは、SNSの波を操り、トレンドを創り出すクリエイター集団。</span> <span>数字とアイデアが交差する場所で、常に新しい挑戦を続けています。</span> </p>
-        </div>
-        <div class="p-top-about__text p-top-about__text--second">
-          <h3 class="p-top-about__heading">なぜSNSなのか？</h3>
-          <p class="p-top-about__description"> <span>それは、わずか数十秒の動画で笑いを呼び、たった1枚の画像で心を動かす
-            そんな不思議な力を秘めているから。</span> <span>求めるのはSNSで新しい価値を生み出したいと本気で思う熱量。
-            年齢やキャリアに関係なく、実力と結果で評価する文化がここにあります。</span> <span>最先端のツールと業界のプロフェッショナルが、あなたの成長をバックアップする。</span> <span>次のSNS革命を起こすのは、君だ。
-            共に、デジタルの新しいページを開こう。</span> </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- p-top-people -->
-  <section class="splide p-top-people" aria-label="Splideの基本的なHTML">
-    <div class="p-top-people__inner"> 
-      
-      <!-- title -->
-      <div class="c-title__wrapper p-top-people__title">
-        <h2 class="c-title-ja">社員を知る</h2>
-        <p class="c-title-en">people</p>
-      </div>
-      
-      <!-- slider -->
-      <div class="splide__track p-top-people__slider">
-        <ul class="splide__list p-top-people__list">
-          <li class="splide__slide p-top-people__item"> 
-            
-            <!-- img -->
-            <div class="p-top-people__img"><img src="assets/images/people/people_human_01.png"
-                                    width="268" height="348" alt=""></div>
-            
-            <!-- content -->
-            <div class="p-top-people__content"> 
-              
-              <!-- text -->
-              <div class="p-top-people__text">
-                <p class="p-top-people__employee-info">V・I　/　営業本部・2017年卒</p>
-                <h3 class="p-top-people__heading"> <span>実力で評価してもらえる</span> <span>それが何よりモチベーション</span> </h3>
-              </div>
-              
-              <!-- graph -->
-              <div class="p-top-people__graph"> <img src="assets/images/people/people_career_path_01.png" width="332" height="113"
-                                        alt=""> </div>
-            </div>
-          </li>
+      <!-- logo -->
+      <h1 class="l-header__logo"> <a href="" class="u-link"> <img src="assets/images/common/logo.svg" alt="BuzzCraft"
+            width="110" height="18"> </a> </h1>
+
+      <!-- nav -->
+      <nav class="l-header__nav u-sp-hidden">
+        <ul class="l-header__list">
+          <li class="l-header__item"><a href="people/" class="l-header__link u-underline">社員を知る</a></li>
+          <li class="l-header__item"><a href="business/" class="l-header__link u-underline">仕事を知る</a></li>
+          <li class="l-header__item"><a href="company/" class="l-header__link u-underline">会社を知る</a></li>
+          <li class="l-header__item"><a href="environment/" class="l-header__link u-underline">環境を知る</a></li>
+          <li class="l-header__item"><a href="recruit/" class="l-header__link u-underline">採用情報を知る</a></li>
+          <li class="l-header__item l-header__item--entry"><a href="entry/" class="l-header__link">エントリーする</a> </li>
         </ul>
-        
-        <!-- pagination -->
-        <button class="p-top-people__pagination p-top-people__pagination--prev"
-                        aria-label="ページネーションボタン 「戻る」"></button>
-        <button class="p-top-people__pagination" aria-label="ページネーションボタン 「進む」"></button>
-      </div>
-      
-      <!-- btn --> 
-      <a href="people/" class="c-btn p-top-people__btn">社員について詳しく見る<span
-                        class="c-arrow c-btn-arrow"></span></a> </div>
-  </section>
-  
-  <!-- p-top-business -->
-  <section class="p-top-business">
-    <div class="p-top-business__inner"> 
-      
-      <!-- background -->
-      <div class="p-top-business__block"> 
-        
-        <!-- content -->
-        <div class="p-top-business__content"> 
-          
-          <!-- title -->
-          <div class="c-title__wrapper p-top-business__title">
-            <h2 class="c-title-ja">仕事を知る</h2>
-            <p class="c-title-en">business</p>
-          </div>
-          
-          <!-- lead -->
-          <h3 class="p-top-business__lead" aria-label="top-businessセクション リード文"> <img src="assets/images/top/top_business_lead.png" width="300" height="76" alt=""> </h3>
-          
-          <!-- description -->
-          <p class="p-top-business__description"> <span>企業の課題で特に多いのが集客と採用です。</span> <span>BuzzCraftはSNS運用とSNS広告運用から上記の課題にアプローチします。</span> </p>
-        </div>
-        
-        <!-- btn --> 
-        <a href="business/" class="c-btn p-top-business__btn">仕事について詳しく見る<span
-                            class="c-arrow c-btn-arrow"></span></a> 
-        
-        <!-- img -->
-        <div class="p-top-business__img"> <img src="assets/images/business/business_icon.png" width="284" height="293" alt=""> </div>
-      </div>
+      </nav>
+
+      <!-- hamburger-btn -->
+      <button class="l-header__hamburger-btn u-pc-hidden js-hamburger__btn" aria-label="メニューを開く"> <span></span>
+        <span></span> </button>
     </div>
-  </section>
-  
-  <!-- p-top-company -->
-  <section class="p-top-company">
-    <div class="p-top-company__inner"> 
-      
-      <!-- title -->
-      <div class="c-title__wrapper p-top-company__title">
-        <h2 class="c-title-ja">会社を知る</h2>
-        <p class="c-title-en">company</p>
-      </div>
-      
-      <!-- lead -->
-      <h3 class="p-top-company__lead" aria-label="top-businessセクション リード文"> <img src="assets/images/top/top_company_lead.png" width="300" height="76" alt=""> </h3>
-      
-      <!-- img -->
-      <div class="p-top-company__img"> <img src="assets/images/top/top_company.png" width="332" height="431" alt=""> </div>
-      
-      <!-- text -->
-      <p class="p-top-company__text"> <span>SNS黎明期からその可能性を見出し、常に最前線を走ってきました。</span> <span>紆余曲折はありましたが、2024年度は中間目標の年商10億円を達成しました。</span> <span>企業理念として「数字で結果を出し、お客様を勝たせる」を掲げ、目まぐるしく変化するSNSと向き合いながら次の時代を創る企業を目指しています。</span> </p>
-      
-      <!-- btn --> 
-      <a href="company/" class="c-btn p-top-company__btn">会社について詳しく見る<span
-                        class="c-arrow c-btn-arrow"></span></a> </div>
-    
-    <!-- slider -->
-    <div class="l-company__slider-wrapper p-top-company__slider-wrapper"> 
-      
-      <!-- 1つ目のスライダー -->
-      <div class="splide l-company__slider p-top-company__slider" role="group"
-                        aria-label="Splideの基本的なHTML">
-        <div class="splide__track l-company__slider-track p-top-company__slider-track">
-          <ul class="splide__list l-company__slider-list p-top-company__slider-list">
-            <li class="splide__slide l-company__slider-slide p-top-company__slider-slide"> <img src="assets/images/company/company_slide_01.jpg" width="205" height="127"
-                                        alt=""> </li>
-            <li class="splide__slide l-company__slider-slide p-top-company__slider-slide"> <img src="assets/images/company/company_slide_02.jpg" width="205" height="127"
-                                        alt=""> </li>
-            <li class="splide__slide l-company__slider-slide p-top-company__slider-slide"> <img src="assets/images/company/company_slide_03.jpg" width="205" height="127"
-                                        alt=""> </li>
-            <li class="splide__slide l-company__slider-slide p-top-company__slider-slide"> <img src="assets/images/company/company_slide_04.jpg" width="205" height="127"
-                                        alt=""> </li>
-          </ul>
-        </div>
-      </div>
-      
-      <!-- 2つ目のスライダー -->
-      <div class="splide l-company__slider--reverse p-top-company__slider--reverse" role="group"
-                        aria-label="Splideの基本的なHTML">
-        <div class="splide__track l-company__slider-track p-top-company__slider-track">
-          <ul class="splide__list l-company__slider-list p-top-company__slider-list">
-            <li class="splide__slide l-company__slider-slide p-top-company__slider-slide"> <img src="assets/images/company/company_slide_05.jpg" width="205" height="127"
-                                        alt=""> </li>
-            <li class="splide__slide l-company__slider-slide p-top-company__slider-slide"> <img src="assets/images/company/company_slide_06.jpg" width="205" height="127"
-                                        alt=""> </li>
-            <li class="splide__slide l-company__slider-slide p-top-company__slider-slide"> <img src="assets/images/company/company_slide_07.jpg" width="205" height="127"
-                                        alt=""> </li>
-            <li class="splide__slide l-company__slider-slide p-top-company__slider-slide"> <img src="assets/images/company/company_slide_08.jpg" width="205" height="127"
-                                        alt=""> </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- p-top-environment -->
-  <section class="p-top-environment">
-    <div class="p-top-environment__inner"> 
-      
-      <!-- content -->
-      <div class="p-top-environment__content"> 
-        
+  </header>
+
+  <!-- hamburger-menu -->
+  <nav class="l-hamburger-menu u-pc-hidden js-hamburger-menu" aria-label="ハンバーガーメニュー">
+    <ul class="l-hamburger-menu__list">
+
+      <!-- people -->
+      <li class="l-hamburger-menu__item"> <a href="people/" class="l-hamburger-menu__link"> <span
+            class="l-hamburger-menu__link-text">社員を知る<span class="l-hamburger-menu__link-text-en">people</span></span>
+          <span class="l-hamburger-menu__link-arrow c-arrow"></span> </a> </li>
+
+      <!-- business -->
+      <li class="l-hamburger-menu__item"> <a href="business/" class="l-hamburger-menu__link"> <span
+            class="l-hamburger-menu__link-text">仕事を知る<span class="l-hamburger-menu__link-text-en">business</span></span>
+          <span class="l-hamburger-menu__link-arrow c-arrow"></span> </a> </li>
+
+      <!-- company -->
+      <li class="l-hamburger-menu__item"> <a href="company/" class="l-hamburger-menu__link"> <span
+            class="l-hamburger-menu__link-text">会社を知る<span class="l-hamburger-menu__link-text-en">company</span></span>
+          <span class="l-hamburger-menu__link-arrow c-arrow"></span> </a> </li>
+
+      <!-- environment -->
+      <li class="l-hamburger-menu__item"> <a href="environment/" class="l-hamburger-menu__link"> <span
+            class="l-hamburger-menu__link-text">環境を知る<span
+              class="l-hamburger-menu__link-text-en">environment</span></span> <span
+            class="l-hamburger-menu__link-arrow c-arrow"></span> </a> </li>
+
+      <!-- recruit -->
+      <li class="l-hamburger-menu__item"> <a href="recruit/" class="l-hamburger-menu__link"> <span
+            class="l-hamburger-menu__link-text">採用情報を知る<span class="l-hamburger-menu__link-text-en">recruit
+              info</span></span> <span class="l-hamburger-menu__link-arrow c-arrow"></span> </a> </li>
+
+      <!-- entry -->
+      <li class="l-hamburger-menu__item l-hamburger-menu__item--entry"> <a href="entry/"
+          class="l-hamburger-menu__link">エントリーする</a> </li>
+    </ul>
+  </nav>
+  <main>
+
+    <!-- p-top-fv -->
+    <section class="p-top-fv">
+      <div class="p-top-fv__inner">
+
         <!-- title -->
-        <div class="c-title__wrapper p-top-environment__title">
-          <h2 class="c-title-ja">環境を知る</h2>
-          <p class="c-title-en">environment</p>
+        <div class="p-top-fv__title-wrapper">
+
+          <!-- sp版は改行しない -->
+          <h2 class="p-top-fv__title-ja p-top-fv__title-ja--pc js-chars-gsap" aria-label="topページ fvタイトル">
+
+            <!-- 「次」 -->
+            <span class="p-top-fv__title-char p-top-fv__title-char--01 js-char"><img
+                src="assets/images/top/top_fv_title_char_01.png" alt="次" width="133" height="130"></span>
+
+            <!-- 「は」 -->
+            <span class="p-top-fv__title-char p-top-fv__title-char--02 js-char"><img
+                src="assets/images/top/top_fv_title_char_02.png" alt="は" width="82" height="78"></span>
+
+            <!-- 「、」 -->
+            <span class="p-top-fv__title-char p-top-fv__title-char--03 js-char"><img
+                src="assets/images/top/top_fv_title_char_03.png" alt="、" width="21" height="23"></span>
+
+            <!-- 「き」 -->
+            <span class="p-top-fv__title-char p-top-fv__title-char--04 js-char"><img
+                src="assets/images/top/top_fv_title_char_04.png" alt="き" width="103" height="129"></span>
+
+            <!-- 「み」 -->
+            <span class="p-top-fv__title-char p-top-fv__title-char--05 js-char"><img
+                src="assets/images/top/top_fv_title_char_05.png" alt="み" width="137" height="117"></span>
+
+            <!-- 「だ」 -->
+            <span class="p-top-fv__title-char p-top-fv__title-char--06 js-char"><img
+                src="assets/images/top/top_fv_title_char_06.png" alt="だ" width="80" height="80"></span>
+
+            <!-- 「。」 -->
+            <span class="p-top-fv__title-char p-top-fv__title-char--07 js-char"><img
+                src="assets/images/top/top_fv_title_char_07.png" alt="。" width="27" height="27"></span>
+          </h2>
+
+          <!-- sp版は改行する -->
+          <h2 class="p-top-fv__title-ja p-top-fv__title-ja--sp js-chars-gsap" aria-label="topページ fvタイトル">
+
+            <!-- 1行目 -->
+            <span class="p-top-fv__title-char-block">
+
+              <!-- 「次」 -->
+              <span class="p-top-fv__title-char p-top-fv__title-char--01 js-char"><img
+                  src="assets/images/top/top_fv_title_char_01.png" alt="次" width="133" height="130"></span>
+
+              <!-- 「は」 -->
+              <span class="p-top-fv__title-char p-top-fv__title-char--02 js-char"><img
+                  src="assets/images/top/top_fv_title_char_02.png" alt="は" width="82" height="78"></span>
+
+              <!-- 「、」 -->
+              <span class="p-top-fv__title-char p-top-fv__title-char--03 js-char"><img
+                  src="assets/images/top/top_fv_title_char_03.png" alt="、" width="21" height="23"></span> </span>
+
+            <!-- 2行目 -->
+            <span class="p-top-fv__title-char-block">
+              <!-- 「き」 -->
+              <span class="p-top-fv__title-char p-top-fv__title-char--04 js-char"><img
+                  src="assets/images/top/top_fv_title_char_04.png" alt="き" width="103" height="129"></span>
+
+              <!-- 「み」 -->
+              <span class="p-top-fv__title-char p-top-fv__title-char--05 js-char"><img
+                  src="assets/images/top/top_fv_title_char_05.png" alt="み" width="137" height="117"></span>
+
+              <!-- 「だ」 -->
+              <span class="p-top-fv__title-char p-top-fv__title-char--06 js-char"><img
+                  src="assets/images/top/top_fv_title_char_06.png" alt="だ" width="80" height="80"></span>
+
+              <!-- 「。」 -->
+              <span class="p-top-fv__title-char p-top-fv__title-char--07 js-char"><img
+                  src="assets/images/top/top_fv_title_char_07.png" alt="。" width="27" height="27"></span> </span>
+          </h2>
+          <p class="p-top-fv__title-en">join us</p>
         </div>
-        
-        <!-- description -->
-        <p class="p-top-environment__description"> <span>BuzzCraftの企業文化や、</span> <span>福利厚生についてご紹介します。</span> </p>
-        
-        <!-- list -->
-        <ul class="p-top-environment__list">
-          
-          <!-- Culture -->
-          <li class="p-top-environment__item"> <a href="environment/#culture" class="p-top-environment__link"> 
-            
+
+        <!-- p-top-fv-news -->
+        <article class="p-top-fv__news">
+          <div class="p-top-fv__news-inner">
+            <!-- title -->
+            <h3 class="p-top-fv__news-title">news</h3>
+
             <!-- content -->
-            <div class="p-top-environment__link-content">
-              <div class="p-top-environment__link-text"> <span class="p-top-environment__link-text-ja">企業文化</span> <span class="p-top-environment__link-text-en">people</span> </div>
+            <div class="p-top-fv__news-content">
+              <p class="p-top-fv__news-time">
+                <time datetime="2026-11-04">2026.11.04</time>
+              </p>
+              <h4 class="p-top-fv__news-content-title">2026年度の採用募集は終了しました</h4>
             </div>
-            
-            <!-- arrow --> 
-            <span class="p-top-environment__link-arrow c-arrow"></span> </a> </li>
-          
-          <!-- Benefits -->
-          <li class="p-top-environment__item"> <a href="environment/#benefits" class="p-top-environment__link"> 
-            
-            <!-- content -->
-            <div class="p-top-environment__link-content">
-              <div class="p-top-environment__link-text"> <span class="p-top-environment__link-text-ja">福利厚生</span> <span class="p-top-environment__link-text-en">benefits</span> </div>
-            </div>
-            
-            <!-- arrow --> 
-            <span class="p-top-environment__link-arrow c-arrow"></span> </a> </li>
-          
-          <!-- oficce -->
-          <li class="p-top-environment__item"> <a href="environment/#oficce" class="p-top-environment__link"> 
-            
-            <!-- content -->
-            <div class="p-top-environment__link-content">
-              <div class="p-top-environment__link-text"> <span class="p-top-environment__link-text-ja">オフィス紹介</span> <span class="p-top-environment__link-text-en">oficce</span> </div>
-            </div>
-            
-            <!-- arrow --> 
-            <span class="p-top-environment__link-arrow c-arrow"></span> </a> </li>
-        </ul>
-        
-        <!-- btn --> 
-        <a href="environment/" class="c-btn p-top-environment__btn"> 環境について詳しく見る <span class="c-arrow c-btn-arrow"></span> </a> </div>
-      
-      <!-- img -->
-      <div class="p-top-environment__imgs u-sp-hidden"> 
-        
-        <!-- Culture -->
-        <div class="p-top-environment__img is-active"> <img src="assets/images/top/top_environment_01.png" width="810" height="830" alt="キャリアスーツに身を包んだ男女"> </div>
-        
-        <!-- Benefits -->
-        <div class="p-top-environment__img"> <img src="assets/images/top/top_environment_02.png" width="810" height="830" alt="笑顔で食事をとる女性"> </div>
-        
-        <!-- oficce -->
-        <div class="p-top-environment__img"> <img src="assets/images/top/top_environment_03.png" width="810" height="830" alt="開放感あふれる白基調のオフィス"> </div>
+          </div>
+        </article>
       </div>
-    </div>
-  </section>
-  
-  <!-- recruit -->
-  <section class="l-recruit">
-    	<div class="l-recruit__inner"> 
-			
-			<div class="l-recruit__block">
-      
-      			<!-- title -->
-      			<h2 class="l-recruit__main-title">
-        			<picture> 
-          				<!-- 画面幅が1080px以下の場合の画像 -->
-          				<source media="(max-width: 1080px)" srcset="assets/images/common/recruit_title_sp.png">
-          
-          				<!-- 上記の条件に当てはまらない場合のデフォルト画像 --> 
-          				<img src="assets/images/common/recruit_title.png" alt="" width="800" height="400"> 
-					</picture>
-				</h2>
-		
-				<!-- content -->
-           	 	<div class="l-recruit__content">
-				
-					<!-- text -->
-					<div class="l-recruit__text">
-        				<div class="c-title__wrapper l-recruit__title">
-          					<h2 class="c-title-ja">採用情報を知る</h2>
-          					<p class="c-title-en">recruit info</p>
-        				</div>
-						
-						<div class="l-recruit__description">
-							<span>本年度の募集要項や、</span>
-							<span>求める人物像ついてご紹介します。</span>
-						</div>
-					</div>
-				
-					<!-- btn -->
-					<a href="recruit/" class="c-btn l-recruit__btn">採用情報について詳しく見る<span class="c-arrow c-btn-arrow l-recruit__btn-arrow"></span></a>
-				</div>
-				
-			</div>
-			
-			<!-- entry-btn -->
-			<a href="entry/" class="l-recruit__entry-btn">
-				
-				<div class="l-recruit__entry-btn-content">
-					<div class="c-title__wrapper l-recruit__entry-btn-title">
-          				<h2 class="c-title-ja">応募する</h2>
-          				<p class="c-title-en">entry</p>
-					</div>
-					
-					<p class="l-recruit__entry-btn-description">
-						エントリーはこちらにページをご覧ください
-					</p>
-				</div>
-				
-				<span class="c-arrow c-btn-arrow l-recruit__entry-btn-arrow"></span>
-			</a>
-	  	</div>
-  </section>
-  
-  <!-- c-title 
+    </section>
+
+    <!-- p-top-about -->
+    <section class="p-top-about js-header__scroll-trigger">
+
+      <!-- background -->
+      <div class="p-top-about__background" aria-hidden="true"></div>
+      <div class="p-top-about__inner">
+
+        <!-- title -->
+        <h2 class="p-top-about__title" aria-label="topページ aboutセクション 見出し"> <img
+            src="assets/images/top/top_about_title.png" alt="topページ aboutセクション 見出し" width="112" height="380"> </h2>
+
+        <!-- text -->
+        <div class="p-top-about__content">
+          <div class="p-top-about__text">
+            <h3 class="p-top-about__heading">SNSで新しい可能性を切り拓く。</h3>
+            <p class="p-top-about__description"> <span>BuzzCraftは、SNSの波を操り、トレンドを創り出すクリエイター集団。</span>
+              <span>数字とアイデアが交差する場所で、常に新しい挑戦を続けています。</span>
+            </p>
+          </div>
+          <div class="p-top-about__text p-top-about__text--second">
+            <h3 class="p-top-about__heading">なぜSNSなのか？</h3>
+            <p class="p-top-about__description"> <span>それは、わずか数十秒の動画で笑いを呼び、たった1枚の画像で心を動かす
+                そんな不思議な力を秘めているから。</span> <span>求めるのはSNSで新しい価値を生み出したいと本気で思う熱量。
+                年齢やキャリアに関係なく、実力と結果で評価する文化がここにあります。</span> <span>最先端のツールと業界のプロフェッショナルが、あなたの成長をバックアップする。</span>
+              <span>次のSNS革命を起こすのは、君だ。
+                共に、デジタルの新しいページを開こう。</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- p-top-people -->
+    <section class="splide p-top-people js-p-top-people" aria-label="Splideの基本的なHTML">
+      <div class="p-top-people__inner">
+
+        <!-- title -->
+        <div class="c-title__wrapper p-top-people__title">
+          <h2 class="c-title-ja">社員を知る</h2>
+          <p class="c-title-en">people</p>
+        </div>
+
+        <!-- slider -->
+        <div class="splide__track p-top-people__slider">
+          <ul class="splide__list p-top-people__list">
+
+
+            <li class="splide__slide p-top-people__item">
+
+              <!-- img -->
+              <div class="p-top-people__img"><img src="assets/images/people/people_human_01.png" width="268"
+                  height="348" alt=""></div>
+
+              <!-- content -->
+              <div class="p-top-people__content">
+
+                <!-- text -->
+                <div class="p-top-people__text">
+                  <p class="p-top-people__employee-info">V・I　/　営業本部・2017年卒</p>
+                  <h3 class="p-top-people__heading"> <span>実力で評価してもらえる</span> <span>それが何よりモチベーション</span> </h3>
+                </div>
+
+                <!-- graph -->
+                <div class="p-top-people__graph"> <img src="assets/images/people/people_career_path_01.png" width="332"
+                    height="113" alt=""> </div>
+              </div>
+            </li>
+
+            <li class="splide__slide p-top-people__item p-top-people__item--second">
+
+              <!-- img -->
+              <div class="p-top-people__img"><img src="assets/images/people/people_human_02.png" width="268"
+                  height="348" alt=""></div>
+
+              <!-- content -->
+              <div class="p-top-people__content">
+
+                <!-- text -->
+                <div class="p-top-people__text">
+                  <p class="p-top-people__employee-info">K・A　/　コンテンツ開発部・2023年卒</p>
+                  <h3 class="p-top-people__heading"> <span>直接お客様の声を聞ける</span> <span>日々の充実感がすごいです。</span> </h3>
+                </div>
+
+                <!-- graph -->
+                <div class="p-top-people__graph"> <img src="assets/images/people/people_career_path_02.png" width="332"
+                    height="113" alt=""> </div>
+              </div>
+            </li>
+
+            <li class="splide__slide p-top-people__item p-top-people__item--third">
+
+              <!-- img -->
+              <div class="p-top-people__img"><img src="assets/images/people/people_human_03.png" width="268"
+                  height="348" alt=""></div>
+
+              <!-- content -->
+              <div class="p-top-people__content">
+
+                <!-- text -->
+                <div class="p-top-people__text">
+                  <p class="p-top-people__employee-info">N・M　/　営業本部・2024年卒</p>
+                  <h3 class="p-top-people__heading">
+                    <span>的確に論理的に、</span>
+                    <span>フィードバックしてくれる。</span>
+                    <span>頼れる先輩方が心強い。</span>
+                  </h3>
+                </div>
+
+                <!-- graph -->
+                <div class="p-top-people__graph"> <img src="assets/images/people/people_career_path_03.png" width="332"
+                    height="113" alt=""> </div>
+              </div>
+            </li>
+
+          </ul>
+
+          <!-- pagination -->
+          <button class="p-top-people__pagination p-top-people__pagination--prev js-prev"
+            aria-label="ページネーションボタン 「戻る」"></button>
+          <button class="p-top-people__pagination js-next" aria-label="ページネーションボタン 「進む」"></button>
+        </div>
+
+        <!-- btn -->
+        <a href="people/" class="c-btn p-top-people__btn">社員について詳しく見る<span class="c-arrow c-btn-arrow"></span></a>
+      </div>
+    </section>
+
+    <!-- p-top-business -->
+    <section class="p-top-business">
+      <div class="p-top-business__inner">
+
+        <!-- background -->
+        <div class="p-top-business__block">
+
+          <!-- content -->
+          <div class="p-top-business__content">
+
+            <!-- title -->
+            <div class="c-title__wrapper p-top-business__title">
+              <h2 class="c-title-ja">仕事を知る</h2>
+              <p class="c-title-en">business</p>
+            </div>
+
+            <!-- lead -->
+            <h3 class="p-top-business__lead" aria-label="top-businessセクション リード文"> <img
+                src="assets/images/top/top_business_lead.png" width="300" height="76" alt=""> </h3>
+
+            <!-- description -->
+            <p class="p-top-business__description"> <span>企業の課題で特に多いのが集客と採用です。</span>
+              <span>BuzzCraftはSNS運用とSNS広告運用から上記の課題にアプローチします。</span>
+            </p>
+          </div>
+
+          <!-- btn -->
+          <a href="business/" class="c-btn p-top-business__btn">仕事について詳しく見る<span class="c-arrow c-btn-arrow"></span></a>
+
+          <!-- img -->
+          <div class="p-top-business__img"> <img src="assets/images/business/business_icon.png" width="284" height="293"
+              alt=""> </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- p-top-company -->
+    <section class="p-top-company">
+      <div class="p-top-company__inner">
+
+        <!-- title -->
+        <div class="c-title__wrapper p-top-company__title">
+          <h2 class="c-title-ja">会社を知る</h2>
+          <p class="c-title-en">company</p>
+        </div>
+
+        <!-- lead -->
+        <h3 class="p-top-company__lead" aria-label="top-businessセクション リード文"> <img
+            src="assets/images/top/top_company_lead.png" width="300" height="76" alt=""> </h3>
+
+        <!-- img -->
+        <div class="p-top-company__img"> <img src="assets/images/top/top_company.png" width="332" height="431" alt="">
+        </div>
+
+        <!-- text -->
+        <p class="p-top-company__text"> <span>SNS黎明期からその可能性を見出し、常に最前線を走ってきました。</span>
+          <span>紆余曲折はありましたが、2024年度は中間目標の年商10億円を達成しました。</span>
+          <span>企業理念として「数字で結果を出し、お客様を勝たせる」を掲げ、目まぐるしく変化するSNSと向き合いながら次の時代を創る企業を目指しています。</span>
+        </p>
+
+        <!-- btn -->
+        <a href="company/" class="c-btn p-top-company__btn">会社について詳しく見る<span class="c-arrow c-btn-arrow"></span></a>
+      </div>
+
+      <!-- slider -->
+      <div class="l-company__slider-wrapper p-top-company__slider-wrapper">
+
+        <!-- 1つ目のスライダー -->
+        <div class="splide l-company__slider p-top-company__slider" role="group" aria-label="Splideの基本的なHTML">
+          <div class="splide__track l-company__slider-track p-top-company__slider-track">
+            <ul class="splide__list l-company__slider-list p-top-company__slider-list">
+              <li class="splide__slide l-company__slider-slide p-top-company__slider-slide"> <img
+                  src="assets/images/company/company_slide_01.jpg" width="205" height="127" alt=""> </li>
+              <li class="splide__slide l-company__slider-slide p-top-company__slider-slide"> <img
+                  src="assets/images/company/company_slide_02.jpg" width="205" height="127" alt=""> </li>
+              <li class="splide__slide l-company__slider-slide p-top-company__slider-slide"> <img
+                  src="assets/images/company/company_slide_03.jpg" width="205" height="127" alt=""> </li>
+              <li class="splide__slide l-company__slider-slide p-top-company__slider-slide"> <img
+                  src="assets/images/company/company_slide_04.jpg" width="205" height="127" alt=""> </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 2つ目のスライダー -->
+        <div class="splide l-company__slider--reverse p-top-company__slider--reverse" role="group"
+          aria-label="Splideの基本的なHTML">
+          <div class="splide__track l-company__slider-track p-top-company__slider-track">
+            <ul class="splide__list l-company__slider-list p-top-company__slider-list">
+              <li class="splide__slide l-company__slider-slide p-top-company__slider-slide"> <img
+                  src="assets/images/company/company_slide_05.jpg" width="205" height="127" alt=""> </li>
+              <li class="splide__slide l-company__slider-slide p-top-company__slider-slide"> <img
+                  src="assets/images/company/company_slide_06.jpg" width="205" height="127" alt=""> </li>
+              <li class="splide__slide l-company__slider-slide p-top-company__slider-slide"> <img
+                  src="assets/images/company/company_slide_07.jpg" width="205" height="127" alt=""> </li>
+              <li class="splide__slide l-company__slider-slide p-top-company__slider-slide"> <img
+                  src="assets/images/company/company_slide_08.jpg" width="205" height="127" alt=""> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- p-top-environment -->
+    <section class="p-top-environment">
+      <div class="p-top-environment__inner">
+
+        <!-- content -->
+        <div class="p-top-environment__content">
+
+          <!-- title -->
+          <div class="c-title__wrapper p-top-environment__title">
+            <h2 class="c-title-ja">環境を知る</h2>
+            <p class="c-title-en">environment</p>
+          </div>
+
+          <!-- description -->
+          <p class="p-top-environment__description"> <span>BuzzCraftの企業文化や、</span> <span>福利厚生についてご紹介します。</span> </p>
+
+          <!-- list -->
+          <ul class="p-top-environment__list">
+
+            <!-- Culture -->
+            <li class="p-top-environment__item"> <a href="environment/#culture" class="p-top-environment__link">
+
+                <!-- content -->
+                <div class="p-top-environment__link-content">
+                  <div class="p-top-environment__link-text"> <span class="p-top-environment__link-text-ja">企業文化</span>
+                    <span class="p-top-environment__link-text-en">people</span>
+                  </div>
+                </div>
+
+                <!-- arrow -->
+                <span class="p-top-environment__link-arrow c-arrow"></span>
+              </a> </li>
+
+            <!-- Benefits -->
+            <li class="p-top-environment__item"> <a href="environment/#benefits" class="p-top-environment__link">
+
+                <!-- content -->
+                <div class="p-top-environment__link-content">
+                  <div class="p-top-environment__link-text"> <span class="p-top-environment__link-text-ja">福利厚生</span>
+                    <span class="p-top-environment__link-text-en">benefits</span>
+                  </div>
+                </div>
+
+                <!-- arrow -->
+                <span class="p-top-environment__link-arrow c-arrow"></span>
+              </a> </li>
+
+            <!-- oficce -->
+            <li class="p-top-environment__item"> <a href="environment/#oficce" class="p-top-environment__link">
+
+                <!-- content -->
+                <div class="p-top-environment__link-content">
+                  <div class="p-top-environment__link-text"> <span class="p-top-environment__link-text-ja">オフィス紹介</span>
+                    <span class="p-top-environment__link-text-en">oficce</span>
+                  </div>
+                </div>
+
+                <!-- arrow -->
+                <span class="p-top-environment__link-arrow c-arrow"></span>
+              </a> </li>
+          </ul>
+
+          <!-- btn -->
+          <a href="environment/" class="c-btn p-top-environment__btn"> 環境について詳しく見る <span
+              class="c-arrow c-btn-arrow"></span> </a>
+        </div>
+
+        <!-- img -->
+        <div class="p-top-environment__imgs u-sp-hidden">
+
+          <!-- Culture -->
+          <div class="p-top-environment__img is-active"> <img src="assets/images/top/top_environment_01.png" width="810"
+              height="830" alt="キャリアスーツに身を包んだ男女"> </div>
+
+          <!-- Benefits -->
+          <div class="p-top-environment__img"> <img src="assets/images/top/top_environment_02.png" width="810"
+              height="830" alt="笑顔で食事をとる女性"> </div>
+
+          <!-- oficce -->
+          <div class="p-top-environment__img"> <img src="assets/images/top/top_environment_03.png" width="810"
+              height="830" alt="開放感あふれる白基調のオフィス"> </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- recruit -->
+    <section class="l-recruit">
+      <div class="l-recruit__inner">
+
+        <div class="l-recruit__block">
+
+          <!-- title -->
+          <h2 class="l-recruit__main-title">
+            <picture>
+              <!-- 画面幅が1080px以下の場合の画像 -->
+              <source media="(max-width: 1080px)" srcset="assets/images/common/recruit_title_sp.png">
+
+              <!-- 上記の条件に当てはまらない場合のデフォルト画像 -->
+              <img src="assets/images/common/recruit_title.png" alt="" width="800" height="400">
+            </picture>
+          </h2>
+
+          <!-- content -->
+          <div class="l-recruit__content">
+
+            <!-- text -->
+            <div class="l-recruit__text">
+              <div class="c-title__wrapper l-recruit__title">
+                <h2 class="c-title-ja">採用情報を知る</h2>
+                <p class="c-title-en">recruit info</p>
+              </div>
+
+              <div class="l-recruit__description">
+                <span>本年度の募集要項や、</span>
+                <span>求める人物像ついてご紹介します。</span>
+              </div>
+            </div>
+
+            <!-- btn -->
+            <a href="recruit/" class="c-btn l-recruit__btn">採用情報について詳しく見る<span
+                class="c-arrow c-btn-arrow l-recruit__btn-arrow"></span></a>
+          </div>
+
+        </div>
+
+        <!-- entry-btn -->
+        <a href="entry/" class="l-recruit__entry-btn">
+
+          <div class="l-recruit__entry-btn-content">
+            <div class="c-title__wrapper l-recruit__entry-btn-title">
+              <h2 class="c-title-ja">応募する</h2>
+              <p class="c-title-en">entry</p>
+            </div>
+
+            <p class="l-recruit__entry-btn-description">
+              エントリーはこちらにページをご覧ください
+            </p>
+          </div>
+
+          <span class="c-arrow c-btn-arrow l-recruit__entry-btn-arrow"></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- c-title 
         <div class="c-title__wrapper">
             <h2 class="c-title-ja">社員を知る</h2>
             <p class="c-title-en">people</p>
         </div>
-        --> 
-  
-  <!-- btn 
-        <a href="" class="c-btn">社員について詳しく見る<span class="c-arrow c-btn-arrow"></span></a>
-        --> 
-</main>
+        -->
 
-<!-- footer -->
-<footer class="l-footer">
-  <div class="l-footer__inner"> 
-    
-    <!-- logo -->
-    <div class="l-footer__logo">
-      <p class="l-footer__logo-text">新卒採用サイト</p>
+    <!-- btn 
+        <a href="" class="c-btn">社員について詳しく見る<span class="c-arrow c-btn-arrow"></span></a>
+        -->
+  </main>
+
+  <!-- footer -->
+  <footer class="l-footer">
+    <div class="l-footer__inner">
+
+      <!-- logo -->
+      <div class="l-footer__logo">
+        <p class="l-footer__logo-text">新卒採用サイト</p>
+      </div>
+
+      <!-- nav -->
+      <nav class="l-footer__nav" aria-label="フッターナビゲーション">
+        <ul class="l-footer__list">
+
+          <!-- people -->
+          <li class="l-footer__item"> <a href="people/" class="l-footer__link"> <span
+                class="l-footer__link-text">社員を知る<span class="l-footer__link-text-en u-pc-hidden">people</span></span>
+              <span class="l-footer__link-arrow c-arrow u-pc-hidden"></span> </a> </li>
+
+          <!-- business -->
+          <li class="l-footer__item"> <a href="business/" class="l-footer__link"> <span
+                class="l-footer__link-text">仕事を知る<span class="l-footer__link-text-en u-pc-hidden">business</span></span>
+              <span class="l-footer__link-arrow c-arrow u-pc-hidden"></span> </a> </li>
+
+          <!-- company -->
+          <li class="l-footer__item"> <a href="company/" class="l-footer__link"> <span
+                class="l-footer__link-text">会社を知る<span class="l-footer__link-text-en u-pc-hidden">company</span></span>
+              <span class="l-footer__link-arrow c-arrow u-pc-hidden"></span> </a> </li>
+
+          <!-- environment -->
+          <li class="l-footer__item"> <a href="environment/" class="l-footer__link"> <span
+                class="l-footer__link-text">環境を知る<span
+                  class="l-footer__link-text-en u-pc-hidden">environment</span></span> <span
+                class="l-footer__link-arrow c-arrow u-pc-hidden"></span> </a> </li>
+
+          <!-- recruit -->
+          <li class="l-footer__item"> <a href="recruit/" class="l-footer__link"> <span
+                class="l-footer__link-text">採用情報を知る<span class="l-footer__link-text-en u-pc-hidden">recruit
+                  info</span></span> <span class="l-footer__link-arrow c-arrow u-pc-hidden"></span> </a> </li>
+
+          <!-- entry -->
+          <li class="l-footer__item l-footer__item--entry"> <a href="entry/" class="l-footer__link">エントリーする</a> </li>
+        </ul>
+      </nav>
+
+      <!-- copy-right -->
+      <small class="l-footer__copyright">© BuzzCraft Co., Ltd.</small>
     </div>
-    
-    <!-- nav -->
-    <nav class="l-footer__nav" aria-label="フッターナビゲーション">
-      <ul class="l-footer__list">
-        
-        <!-- people -->
-        <li class="l-footer__item"> <a href="people/" class="l-footer__link"> <span class="l-footer__link-text">社員を知る<span
-                                    class="l-footer__link-text-en u-pc-hidden">people</span></span> <span class="l-footer__link-arrow c-arrow u-pc-hidden"></span> </a> </li>
-        
-        <!-- business -->
-        <li class="l-footer__item"> <a href="business/" class="l-footer__link"> <span class="l-footer__link-text">仕事を知る<span
-                                    class="l-footer__link-text-en u-pc-hidden">business</span></span> <span class="l-footer__link-arrow c-arrow u-pc-hidden"></span> </a> </li>
-        
-        <!-- company -->
-        <li class="l-footer__item"> <a href="company/" class="l-footer__link"> <span class="l-footer__link-text">会社を知る<span
-                                    class="l-footer__link-text-en u-pc-hidden">company</span></span> <span class="l-footer__link-arrow c-arrow u-pc-hidden"></span> </a> </li>
-        
-        <!-- environment -->
-        <li class="l-footer__item"> <a href="environment/" class="l-footer__link"> <span class="l-footer__link-text">環境を知る<span
-                                    class="l-footer__link-text-en u-pc-hidden">environment</span></span> <span class="l-footer__link-arrow c-arrow u-pc-hidden"></span> </a> </li>
-        
-        <!-- recruit -->
-        <li class="l-footer__item"> <a href="recruit/" class="l-footer__link"> <span class="l-footer__link-text">採用情報を知る<span
-                                    class="l-footer__link-text-en u-pc-hidden">recruit info</span></span> <span class="l-footer__link-arrow c-arrow u-pc-hidden"></span> </a> </li>
-        
-        <!-- entry -->
-        <li class="l-footer__item l-footer__item--entry"> <a href="entry/" class="l-footer__link">エントリーする</a> </li>
-      </ul>
-    </nav>
-    
-    <!-- copy-right --> 
-    <small class="l-footer__copyright">© BuzzCraft Co., Ltd.</small> </div>
-</footer>
-    
-<!-- ja読み込み -->
-<script src="assets/js/main.js" type="module"></script>
+  </footer>
+
+  <!-- splide読み込み -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" defer></script>
+
+  <!-- ja読み込み -->
+  <script src="assets/js/main.js" type="module"></script>
 </body>
+
 </html>
