@@ -9,11 +9,14 @@ export function initSlider() {
 
   const sliders = document.querySelectorAll(".splide");
 
+  if (!sliders.length === 0) return;
+
   sliders.forEach((slider) => {
     // 共通オプション
     const options = {
       type: "loop",
       arrows: false,
+      pagination: false, // ページネーションを非表示
     };
 
     // =============================================================================
@@ -24,10 +27,6 @@ export function initSlider() {
       Object.assign(options, {
         focus: "center",
         start: 0,
-        pagination: false, // ページネーションを非表示
-        autoScroll: {
-          speed: 0,
-        },
 
         breakpoints: {
           1080: {
@@ -68,7 +67,27 @@ export function initSlider() {
       });
     }
 
+    // =============================================================================
+    // environment-oficce
+    // =============================================================================
+    if (slider.classList.contains("js-environment-oficce__slider")) {
+      Object.assign(options, {
+        focus: "center",
+        start: 0,
+        fixedWidth: "820rem",
+        gap: "14rem",
+
+        breakpoints: {
+          1080: {
+            fixedWidth: "268rem",
+          },
+        },
+      });
+    }
+
+    // =============================================================================
     // Splide初期化
+    // =============================================================================
     const splide = new Splide(slider, options);
 
     // companyのスライダーのみAuto Scroll拡張機能を適用
@@ -76,6 +95,39 @@ export function initSlider() {
       splide.mount(window.splide.Extensions);
     } else {
       splide.mount();
+    }
+
+    // =============================================================================
+    // ページネイション設定
+    // =============================================================================
+    const pagiNaition = document.querySelectorAll(".js-pagination");
+
+    if (pagiNaition.length > 0) {
+      const dots = document.querySelectorAll(".js-pagination-dot");
+
+      // アクティブなドットを更新
+      const updateDots = (index) => {
+        dots.forEach((dot, i) => {
+          dot.classList.toggle("is-active", i === index);
+        });
+      };
+
+      // 初期表示
+      splide.on("mounted", () => {
+        updateDots(splide.index);
+      });
+
+      // スライド移動時
+      splide.on("move", (newIndex) => {
+        updateDots(newIndex);
+      });
+
+      // ドットクリックでスライド移動
+      dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+          splide.go(index);
+        });
+      });
     }
 
     // =============================================================================

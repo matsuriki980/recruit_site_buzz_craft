@@ -1,357 +1,459 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>環境を知る | BuzzCraft</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>環境を知る | BuzzCraft</title>
 
-<!-- 実案件ではないため設定 -->
-<meta name="robots" content="noindex,nofollow">
+    <!-- 実案件ではないため設定 -->
+    <meta name="robots" content="noindex,nofollow">
 
-<!-- OGP設定 -->
-<meta property="og:url" content="https://matsuyamarikiya.jp/recruit_site_buzz_craft/environment">
-<meta property="og:type" content="article">
-<meta property="og:title" content="環境を知る | BuzzCraft">
-<meta property="og:description"
+    <!-- OGP設定 -->
+    <meta property="og:url" content="https://matsuyamarikiya.jp/recruit_site_buzz_craft/environment">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="環境を知る | BuzzCraft">
+    <meta property="og:description"
         content="東京を拠点とするBuzzCraftは、SNSの波を操り、トレンドを創り出すクリエイター集団。数字とアイデアが交差する場所で、常に新しい挑戦を続けています。">
-<meta property="og:site_name" content="BuzzCraft">
+    <meta property="og:site_name" content="BuzzCraft">
 
-<!-- ファビコン -->
-<link rel="icon" href="../assets/images/common/favicon.ico">
-<link rel="apple-touch-icon" sizes="180x180" href="../assets/images/common/favicon.ico">
+    <!-- ファビコン -->
+    <link rel="icon" href="../assets/images/common/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/common/favicon.ico">
 
-<!-- google fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
         href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP&display=swap"
         rel="stylesheet">
 
-<!-- css -->
-<link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- splide読み込み -->
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
 
-<!-- header -->
-<header class="l-header l-header--sub-page js-header">
-    <div class="l-header__inner"> 
-        
-        <!-- logo -->
-        <div class="l-header__logo"> <a href="../" class="u-link"> <img src="../assets/images/common/logo.svg" alt="BuzzCraft" width="110" height="18"> </a> </div>
-        
-        <!-- nav -->
-        <nav class="l-header__nav u-sp-hidden">
-            <ul class="l-header__list">
-                <li class="l-header__item"><a href="../people/" class="l-header__link u-underline">社員を知る</a></li>
-                <li class="l-header__item"><a href="../business/" class="l-header__link u-underline">仕事を知る</a></li>
-                <li class="l-header__item"><a href="../company/" class="l-header__link u-underline">会社を知る</a></li>
-                <li class="l-header__item"><a href="" class="l-header__link u-underline">環境を知る</a></li>
-                <li class="l-header__item"><a href="../recruit/" class="l-header__link u-underline">採用情報を知る</a></li>
-                <li class="l-header__item l-header__item--entry"><a href="../entry/" class="l-header__link">エントリーする</a> </li>
-            </ul>
-        </nav>
-        
-        <!-- hamburger-btn -->
-        <button class="l-header__hamburger-btn u-pc-hidden js-hamburger__btn" aria-label="メニューを開く"> <span></span> <span></span> </button>
-    </div>
-</header>
+    <!-- header -->
+    <header class="l-header l-header--sub-page js-header">
+        <div class="l-header__inner">
 
-<!-- hamburger-menu -->
-<nav class="l-hamburger-menu u-pc-hidden js-hamburger-menu" aria-label="ハンバーガーメニュー">
-    <ul class="l-hamburger-menu__list">
-        
-        <!-- people -->
-        <li class="l-hamburger-menu__item"> <a href="../people/" class="l-hamburger-menu__link"> <span class="l-hamburger-menu__link-text"> 社員を知る <span class="l-hamburger-menu__link-text-en">people</span> </span> <span class="l-hamburger-menu__link-arrow c-arrow"></span> </a> </li>
-        
-        <!-- business -->
-        <li class="l-hamburger-menu__item"> <a href="../business/" class="l-hamburger-menu__link"> <span class="l-hamburger-menu__link-text"> 仕事を知る <span class="l-hamburger-menu__link-text-en">business</span> </span> <span class="l-hamburger-menu__link-arrow c-arrow"></span> </a> </li>
-        
-        <!-- company -->
-        <li class="l-hamburger-menu__item"> <a href="../company/" class="l-hamburger-menu__link"> <span class="l-hamburger-menu__link-text"> 会社を知る <span class="l-hamburger-menu__link-text-en">company</span> </span> <span class="l-hamburger-menu__link-arrow c-arrow"></span> </a> </li>
-        
-        <!-- environment -->
-        <li class="l-hamburger-menu__item"> <a href="" class="l-hamburger-menu__link"> <span class="l-hamburger-menu__link-text"> 環境を知る <span class="l-hamburger-menu__link-text-en">environment</span> </span> <span class="l-hamburger-menu__link-arrow c-arrow"></span> </a> </li>
-        
-        <!-- recruit -->
-        <li class="l-hamburger-menu__item"> <a href="../recruit/" class="l-hamburger-menu__link"> <span class="l-hamburger-menu__link-text"> 採用情報を知る <span class="l-hamburger-menu__link-text-en">recruit info</span> </span> <span class="l-hamburger-menu__link-arrow c-arrow"></span> </a> </li>
-        
-        <!-- entry -->
-        <li class="l-hamburger-menu__item l-hamburger-menu__item--entry"> <a href="../entry/" class="l-hamburger-menu__link">エントリーする</a> </li>
-    </ul>
-</nav>
-<main> 
-    
-    <!-- fv -->
-    <section class="l-fv p-environment__fv">
-        <div class="l-fv__inner"> 
-            
-            <!-- title -->
-            <div class="l-fv__title-wrapper">
-                <h1 class="l-fv__title-ja">環境を知る</h1>
-                <p class="l-fv__title-en">environment</p>
-            </div>
+            <!-- logo -->
+            <div class="l-header__logo"> <a href="../" class="u-link"> <img src="../assets/images/common/logo.svg"
+                        alt="BuzzCraft" width="110" height="18"> </a> </div>
+
+            <!-- nav -->
+            <nav class="l-header__nav u-sp-hidden">
+                <ul class="l-header__list">
+                    <li class="l-header__item"><a href="../people/" class="l-header__link u-underline">社員を知る</a></li>
+                    <li class="l-header__item"><a href="../business/" class="l-header__link u-underline">仕事を知る</a></li>
+                    <li class="l-header__item"><a href="../company/" class="l-header__link u-underline">会社を知る</a></li>
+                    <li class="l-header__item"><a href="" class="l-header__link u-underline">環境を知る</a></li>
+                    <li class="l-header__item"><a href="../recruit/" class="l-header__link u-underline">採用情報を知る</a></li>
+                    <li class="l-header__item l-header__item--entry"><a href="../entry/"
+                            class="l-header__link">エントリーする</a> </li>
+                </ul>
+            </nav>
+
+            <!-- hamburger-btn -->
+            <button class="l-header__hamburger-btn u-pc-hidden js-hamburger__btn" aria-label="メニューを開く"> <span></span>
+                <span></span> </button>
         </div>
-    </section>
-    <div class="l-breadcrumb-relative js-header__scroll-trigger"> 
-        
-        <!-- パンくずリスト -->
-        <div class="l-breadcrumb">
-            <ul class="l-breadcrumb__list">
-                <li class="l-breadcrumb__item"> <a href="../" class="l-breadcrumb__link u-underline">home</a> </li>
-                <li class="l-breadcrumb__arrow"> <img src="../assets/images/common/breadcrumb-arrow.svg" alt=""> </li>
-                <li class="l-breadcrumb__item"> <a href="" class="l-breadcrumb__link is-active">環境を知る</a> </li>
-            </ul>
-            
-            <!-- scroll-bar -->
-            <div class="l-breadcrumb__scroll-bar"> <span class="l-breadcrumb__scroll-bar-text">scroll</span> </div>
-        </div>
-        
-        <!-- people -->
-        <section class="p-environment-people">
-            <div class="p-environment-people__inner"> 
-                
+    </header>
+
+    <!-- hamburger-menu -->
+    <nav class="l-hamburger-menu u-pc-hidden js-hamburger-menu" aria-label="ハンバーガーメニュー">
+        <ul class="l-hamburger-menu__list">
+
+            <!-- people -->
+            <li class="l-hamburger-menu__item"> <a href="../people/" class="l-hamburger-menu__link"> <span
+                        class="l-hamburger-menu__link-text"> 社員を知る <span
+                            class="l-hamburger-menu__link-text-en">people</span> </span> <span
+                        class="l-hamburger-menu__link-arrow c-arrow"></span> </a> </li>
+
+            <!-- business -->
+            <li class="l-hamburger-menu__item"> <a href="../business/" class="l-hamburger-menu__link"> <span
+                        class="l-hamburger-menu__link-text"> 仕事を知る <span
+                            class="l-hamburger-menu__link-text-en">business</span> </span> <span
+                        class="l-hamburger-menu__link-arrow c-arrow"></span> </a> </li>
+
+            <!-- company -->
+            <li class="l-hamburger-menu__item"> <a href="../company/" class="l-hamburger-menu__link"> <span
+                        class="l-hamburger-menu__link-text"> 会社を知る <span
+                            class="l-hamburger-menu__link-text-en">company</span> </span> <span
+                        class="l-hamburger-menu__link-arrow c-arrow"></span> </a> </li>
+
+            <!-- environment -->
+            <li class="l-hamburger-menu__item"> <a href="" class="l-hamburger-menu__link"> <span
+                        class="l-hamburger-menu__link-text"> 環境を知る <span
+                            class="l-hamburger-menu__link-text-en">environment</span> </span> <span
+                        class="l-hamburger-menu__link-arrow c-arrow"></span> </a> </li>
+
+            <!-- recruit -->
+            <li class="l-hamburger-menu__item"> <a href="../recruit/" class="l-hamburger-menu__link"> <span
+                        class="l-hamburger-menu__link-text"> 採用情報を知る <span
+                            class="l-hamburger-menu__link-text-en">recruit info</span> </span> <span
+                        class="l-hamburger-menu__link-arrow c-arrow"></span> </a> </li>
+
+            <!-- entry -->
+            <li class="l-hamburger-menu__item l-hamburger-menu__item--entry"> <a href="../entry/"
+                    class="l-hamburger-menu__link">エントリーする</a> </li>
+        </ul>
+    </nav>
+    <main>
+
+        <!-- fv -->
+        <section class="l-fv p-environment__fv">
+            <div class="l-fv__inner">
+
                 <!-- title -->
-                <div class="c-title__wrapper p-environment-people__title-wrapper">
-                    <h2 class="c-title-ja">企業文化</h2>
-                    <p class="c-title-en">people</p>
-                </div>
-                
-                <!-- content -->
-                <div class="p-environment-people__content"> 
-                    
-                    <!-- lead -->
-                    <h3 class="p-environment-people__lead"> <span>「クライアントを勝たせる」</span> <span>そのためなら年齢もキャリアも関係ない</span> </h3>
-                    
-                    <!-- description -->
-                    <p class="p-environment-people__description"> <span>BuzzCraftの行動理念は「クライアントを勝たせること」</span> <span>若手もベテランもこの1点を目的をするため、年齢やキャリアに関係なく日々、共に研鑽を行なっております。</span> <span>そして、実力・結果を正当に評価するため、主体的な社員が多く在籍しているのも特徴です。</span> <span>また、社員の独立を会社全体で積極的にバックアップします。存分にBuzzCraftのノウハウを吸収していただければと思います。</span> <span>必要のない文化は徹底的に取っ払い、いいものは積極的に吸収する。
-                        やりがいのある仕事を共にしませんか？</span> </p>
-                </div>
-                
-                <!-- img -->
-                <div class="p-environment-people__img"> <img src="../assets/images/environment/environment_people.png" alt="笑顔で見上げるスーツ姿の男女"> </div>
-            </div>
-        </section>
-        
-        <!-- benefits -->
-        <section class="p-environment-benefits">
-            <div class="p-environment-benefits__inner"> 
-                
-                <!-- title -->
-                <div class="c-title__wrapper c-title__wrapper-line p-environment-benefits__title-wrapper">
-                    <h2 class="c-title-ja">福利厚生</h2>
-                    <p class="c-title-en">benefits</p>
-                </div>
-                
-                <!-- list -->
-                <div class="p-environment-benefits__list-wrapper">
-                    <dl class="p-environment-benefits__list">
-                        
-                        <!-- 家賃補助制度 -->
-                        <div class="p-environment-benefits__item">
-                            <dt class="p-environment-benefits__item-title">家賃補助制度</dt>
-                            <dd class="p-environment-benefits__item-description"> 自宅最寄り駅から会社までの距離が近い正社員に対して支給される家賃補助制度です。内勤・外勤・地方支店含め、全社員が対象となっています。 </dd>
-                        </div>
-                        
-                        <!-- 資格取得支援制度 -->
-                        <div class="p-environment-benefits__item">
-                            <dt class="p-environment-benefits__item-title">資格取得支援制度</dt>
-                            <dd class="p-environment-benefits__item-description"> 会社が規定した資格の受験費用を会社が全負担、または一部負担する制度です。公認会計士やキャリアコンサルタントなどの国家資格から、Web解析士や技術系の専門資格まで約100個の資格が対象となっています。 </dd>
-                        </div>
-                        
-                        <!-- 読書支援制度 -->
-                        <div class="p-environment-benefits__item">
-                            <dt class="p-environment-benefits__item-title">読書支援制度</dt>
-                            <dd class="p-environment-benefits__item-description"> 社員教育の一環として、新卒入社の社員が自己投資のため、専門書等の高額な書籍の購入を躊躇しなくてよいように書籍購入の支援をしています。また代表や各事業部長が推薦する社内のビジネス誌はすべて読み放題です。 </dd>
-                        </div>
-                        
-                        <!-- ライフプラン制度 -->
-                        <div class="p-environment-benefits__item">
-                            <dt class="p-environment-benefits__item-title">ライフプラン制度</dt>
-                            <dd class="p-environment-benefits__item-description"> 社員が自分で掛け金額や運用商品を選択し、60歳以降に掛け金を受け取れる制度です。確定拠出年金の活用によって、毎月の社会保険料や税金の負担を軽減でき、運用で得た利益は全額非課税での受け取りが可能です。 </dd>
-                        </div>
-                    </dl>
-                    
-                    <!-- ライフイベントに合わせた制度 -->
-                    <dl class="p-environment-benefits__second-list">
-                        <dt class="p-environment-benefits__second-title">ライフイベントに合わせた制度</dt>
-                        <dd class="p-environment-benefits__second-content">
-                            <dl class="p-environment-benefits__list">
-                                
-                                <!-- 子育て支援制度 -->
-                                <div class="p-environment-benefits__item">
-                                    <dt class="p-environment-benefits__item-title">子育て支援制度</dt>
-                                    <dd class="p-environment-benefits__item-description"> 子育て世代のワークライフバランスの向上を目指し、出産・育児を予定している社員に向けてワーキングマザー・ファザーガイドブックの配布や、上司に向けて社員のキャリア応援目的としたイクボスガイドブックの配布も行っています。 </dd>
-                                </div>
-                                
-                                <!-- 男性育児休暇 -->
-                                <div class="p-environment-benefits__item">
-                                    <dt class="p-environment-benefits__item-title">男性育児休暇</dt>
-                                    <dd class="p-environment-benefits__item-description"> 配偶者の出産に伴い、男性従業員が育児休業の取得を希望する場合は、育児休業を取得することができます。配偶者の出産にともなう育児休業は、子どもの出生日から、基本的には子どもが1歳になるまでが取得可能期間となります。 </dd>
-                                </div>
-                                
-                                <!-- 育休・産休制度 -->
-                                <div class="p-environment-benefits__item">
-                                    <dt class="p-environment-benefits__item-title">育休・産休制度</dt>
-                                    <dd class="p-environment-benefits__item-description"> 出産予定の女性社員は、産前6週間、産後8週間の休暇を取得することができます。取得要件を満たす従業員は、子どもが1歳になるまで育児休業を取得でき、就業規則の条件を満たした場合、最長2歳まで延長することができます。 </dd>
-                                </div>
-                                
-                                <!-- 特別休暇 -->
-                                <div class="p-environment-benefits__item">
-                                    <dt class="p-environment-benefits__item-title">特別休暇</dt>
-                                    <dd class="p-environment-benefits__item-description"> 家庭を持つ方にも働きやすい環境を提供したい。そんな想いでつくられた個人に合わせた働き方を実現する制度です。「関係者全員の幸福の追求」という企業理念を実現する制度の一つであり、ライフスタイルの変化に対応しやすい環境を用意しています。 </dd>
-                                </div>
-                                
-                                <!-- 保育料補助 -->
-                                <div class="p-environment-benefits__item">
-                                    <dt class="p-environment-benefits__item-title">保育料補助</dt>
-                                    <dd class="p-environment-benefits__item-description"> 産後からの復業支援として、入園する保育園で発生する月々の保育料と、居住する自治体の認可保育園で定められている保育料の差額を、上限10万円まで会社が負担します。その他の保育支援では、フルタイムや時短勤務など、本人の要望に合わせた勤務時間や報酬体系を選択することができます。 </dd>
-                                </div>
-                            </dl>
-                        </dd>
-                    </dl>
-                    
-                    <!-- スキルアップ支援 -->
-                    <dl class="p-environment-benefits__second-list">
-                        <dt class="p-environment-benefits__second-title">スキルアップ支援</dt>
-                        <dd class="p-environment-benefits__second-content">
-                            <dl class="p-environment-benefits__list">
-                                
-                                <!-- 社内研修・学習 -->
-                                <div class="p-environment-benefits__item">
-                                    <dt class="p-environment-benefits__item-title">社内研修・学習</dt>
-                                    <dd class="p-environment-benefits__item-description"> 入社後1カ月に及ぶ新卒研修をはじめ、新卒2年目まで半年に1回のフォロー研修など、様々な研修が用意されています。希望者は1,700コース9,000本以上のビジネス系動画を視聴できるオンライン学習サービスの利用が可能です。 </dd>
-                                </div>
-                                
-                                <!-- 社内勉強会 -->
-                                <div class="p-environment-benefits__item">
-                                    <dt class="p-environment-benefits__item-title">社内勉強会</dt>
-                                    <dd class="p-environment-benefits__item-description"> 部署や職種を横断したナレッジ共有会を毎月行っています。各事業部、各部門で持っているノウハウを共有することで、個人のスキルアップだけでなく、事業部間の連携・情報共有の促進も行っています。 </dd>
-                                </div>
-                            </dl>
-                        </dd>
-                    </dl>
+                <div class="l-fv__title-wrapper">
+                    <h1 class="l-fv__title-ja">環境を知る</h1>
+                    <p class="l-fv__title-en">environment</p>
                 </div>
             </div>
         </section>
-        
-        <!-- oficce -->
-        <section class="splide p-environment-oficce" aria-label="Splideの基本的なHTML">
-            <div class="p-environment-oficce__inner"> 
-                
-                <!-- title -->
-                <div class="c-title__wrapper c-title__wrapper-line p-environment-oficce__title-wrapper">
-                    <h2 class="c-title-ja">オフィス紹介</h2>
-                    <p class="c-title-en">oficce</p>
+        <div class="l-breadcrumb-relative js-header__scroll-trigger">
+
+            <!-- パンくずリスト -->
+            <div class="l-breadcrumb">
+                <ul class="l-breadcrumb__list">
+                    <li class="l-breadcrumb__item"> <a href="../" class="l-breadcrumb__link u-underline">home</a> </li>
+                    <li class="l-breadcrumb__arrow"> <img src="../assets/images/common/breadcrumb-arrow.svg" alt="">
+                    </li>
+                    <li class="l-breadcrumb__item"> <a href="" class="l-breadcrumb__link is-active">環境を知る</a> </li>
+                </ul>
+
+                <!-- scroll-bar -->
+                <div class="l-breadcrumb__scroll-bar"> <span class="l-breadcrumb__scroll-bar-text">scroll</span> </div>
+            </div>
+
+            <!-- people -->
+            <section class="p-environment-people">
+                <div class="p-environment-people__inner">
+
+                    <!-- title -->
+                    <div class="c-title__wrapper p-environment-people__title-wrapper">
+                        <h2 class="c-title-ja">企業文化</h2>
+                        <p class="c-title-en">people</p>
+                    </div>
+
+                    <!-- content -->
+                    <div class="p-environment-people__content">
+
+                        <!-- lead -->
+                        <h3 class="p-environment-people__lead"> <span>「クライアントを勝たせる」</span>
+                            <span>そのためなら年齢もキャリアも関係ない</span>
+                        </h3>
+
+                        <!-- description -->
+                        <p class="p-environment-people__description"> <span>BuzzCraftの行動理念は「クライアントを勝たせること」</span>
+                            <span>若手もベテランもこの1点を目的をするため、年齢やキャリアに関係なく日々、共に研鑽を行なっております。</span>
+                            <span>そして、実力・結果を正当に評価するため、主体的な社員が多く在籍しているのも特徴です。</span>
+                            <span>また、社員の独立を会社全体で積極的にバックアップします。存分にBuzzCraftのノウハウを吸収していただければと思います。</span>
+                            <span>必要のない文化は徹底的に取っ払い、いいものは積極的に吸収する。
+                                やりがいのある仕事を共にしませんか？</span>
+                        </p>
+                    </div>
+
+                    <!-- img -->
+                    <div class="p-environment-people__img"> <img
+                            src="../assets/images/environment/environment_people.png" alt="笑顔で見上げるスーツ姿の男女"> </div>
                 </div>
-                
-                <!-- list -->
-                <div class="splide__track p-environment-oficce__slider">
-                    <ul class="splide__list p-environment-oficce__slider-list">
-                        <li class="splide__slide p-environment-oficce__slider-item is-active"> <img src="../assets/images/environment/environment_oficce_01.png" alt=""> </li>
-                        <li class="splide__slide p-environment-oficce__slider-item"> <img src="../assets/images/environment/environment_oficce_02.png" alt=""> </li>
-                        <li class="splide__slide p-environment-oficce__slider-item"> <img src="../assets/images/environment/environment_oficce_03.png" alt=""> </li>
-                        <li class="splide__slide p-environment-oficce__slider-item"> <img src="../assets/images/environment/environment_oficce_04.png" alt=""> </li>
+            </section>
+
+            <!-- benefits -->
+            <section class="p-environment-benefits">
+                <div class="p-environment-benefits__inner">
+
+                    <!-- title -->
+                    <div class="c-title__wrapper c-title__wrapper-line p-environment-benefits__title-wrapper">
+                        <h2 class="c-title-ja">福利厚生</h2>
+                        <p class="c-title-en">benefits</p>
+                    </div>
+
+                    <!-- list -->
+                    <div class="p-environment-benefits__list-wrapper">
+                        <dl class="p-environment-benefits__list">
+
+                            <!-- 家賃補助制度 -->
+                            <div class="p-environment-benefits__item">
+                                <dt class="p-environment-benefits__item-title">家賃補助制度</dt>
+                                <dd class="p-environment-benefits__item-description">
+                                    自宅最寄り駅から会社までの距離が近い正社員に対して支給される家賃補助制度です。内勤・外勤・地方支店含め、全社員が対象となっています。 </dd>
+                            </div>
+
+                            <!-- 資格取得支援制度 -->
+                            <div class="p-environment-benefits__item">
+                                <dt class="p-environment-benefits__item-title">資格取得支援制度</dt>
+                                <dd class="p-environment-benefits__item-description">
+                                    会社が規定した資格の受験費用を会社が全負担、または一部負担する制度です。公認会計士やキャリアコンサルタントなどの国家資格から、Web解析士や技術系の専門資格まで約100個の資格が対象となっています。
+                                </dd>
+                            </div>
+
+                            <!-- 読書支援制度 -->
+                            <div class="p-environment-benefits__item">
+                                <dt class="p-environment-benefits__item-title">読書支援制度</dt>
+                                <dd class="p-environment-benefits__item-description">
+                                    社員教育の一環として、新卒入社の社員が自己投資のため、専門書等の高額な書籍の購入を躊躇しなくてよいように書籍購入の支援をしています。また代表や各事業部長が推薦する社内のビジネス誌はすべて読み放題です。
+                                </dd>
+                            </div>
+
+                            <!-- ライフプラン制度 -->
+                            <div class="p-environment-benefits__item">
+                                <dt class="p-environment-benefits__item-title">ライフプラン制度</dt>
+                                <dd class="p-environment-benefits__item-description">
+                                    社員が自分で掛け金額や運用商品を選択し、60歳以降に掛け金を受け取れる制度です。確定拠出年金の活用によって、毎月の社会保険料や税金の負担を軽減でき、運用で得た利益は全額非課税での受け取りが可能です。
+                                </dd>
+                            </div>
+                        </dl>
+
+                        <!-- ライフイベントに合わせた制度 -->
+                        <dl class="p-environment-benefits__second-list">
+                            <dt class="p-environment-benefits__second-title">ライフイベントに合わせた制度</dt>
+                            <dd class="p-environment-benefits__second-content">
+                                <dl class="p-environment-benefits__list">
+
+                                    <!-- 子育て支援制度 -->
+                                    <div class="p-environment-benefits__item">
+                                        <dt class="p-environment-benefits__item-title">子育て支援制度</dt>
+                                        <dd class="p-environment-benefits__item-description">
+                                            子育て世代のワークライフバランスの向上を目指し、出産・育児を予定している社員に向けてワーキングマザー・ファザーガイドブックの配布や、上司に向けて社員のキャリア応援目的としたイクボスガイドブックの配布も行っています。
+                                        </dd>
+                                    </div>
+
+                                    <!-- 男性育児休暇 -->
+                                    <div class="p-environment-benefits__item">
+                                        <dt class="p-environment-benefits__item-title">男性育児休暇</dt>
+                                        <dd class="p-environment-benefits__item-description">
+                                            配偶者の出産に伴い、男性従業員が育児休業の取得を希望する場合は、育児休業を取得することができます。配偶者の出産にともなう育児休業は、子どもの出生日から、基本的には子どもが1歳になるまでが取得可能期間となります。
+                                        </dd>
+                                    </div>
+
+                                    <!-- 育休・産休制度 -->
+                                    <div class="p-environment-benefits__item">
+                                        <dt class="p-environment-benefits__item-title">育休・産休制度</dt>
+                                        <dd class="p-environment-benefits__item-description">
+                                            出産予定の女性社員は、産前6週間、産後8週間の休暇を取得することができます。取得要件を満たす従業員は、子どもが1歳になるまで育児休業を取得でき、就業規則の条件を満たした場合、最長2歳まで延長することができます。
+                                        </dd>
+                                    </div>
+
+                                    <!-- 特別休暇 -->
+                                    <div class="p-environment-benefits__item">
+                                        <dt class="p-environment-benefits__item-title">特別休暇</dt>
+                                        <dd class="p-environment-benefits__item-description">
+                                            家庭を持つ方にも働きやすい環境を提供したい。そんな想いでつくられた個人に合わせた働き方を実現する制度です。「関係者全員の幸福の追求」という企業理念を実現する制度の一つであり、ライフスタイルの変化に対応しやすい環境を用意しています。
+                                        </dd>
+                                    </div>
+
+                                    <!-- 保育料補助 -->
+                                    <div class="p-environment-benefits__item">
+                                        <dt class="p-environment-benefits__item-title">保育料補助</dt>
+                                        <dd class="p-environment-benefits__item-description">
+                                            産後からの復業支援として、入園する保育園で発生する月々の保育料と、居住する自治体の認可保育園で定められている保育料の差額を、上限10万円まで会社が負担します。その他の保育支援では、フルタイムや時短勤務など、本人の要望に合わせた勤務時間や報酬体系を選択することができます。
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </dd>
+                        </dl>
+
+                        <!-- スキルアップ支援 -->
+                        <dl class="p-environment-benefits__second-list">
+                            <dt class="p-environment-benefits__second-title">スキルアップ支援</dt>
+                            <dd class="p-environment-benefits__second-content">
+                                <dl class="p-environment-benefits__list">
+
+                                    <!-- 社内研修・学習 -->
+                                    <div class="p-environment-benefits__item">
+                                        <dt class="p-environment-benefits__item-title">社内研修・学習</dt>
+                                        <dd class="p-environment-benefits__item-description">
+                                            入社後1カ月に及ぶ新卒研修をはじめ、新卒2年目まで半年に1回のフォロー研修など、様々な研修が用意されています。希望者は1,700コース9,000本以上のビジネス系動画を視聴できるオンライン学習サービスの利用が可能です。
+                                        </dd>
+                                    </div>
+
+                                    <!-- 社内勉強会 -->
+                                    <div class="p-environment-benefits__item">
+                                        <dt class="p-environment-benefits__item-title">社内勉強会</dt>
+                                        <dd class="p-environment-benefits__item-description">
+                                            部署や職種を横断したナレッジ共有会を毎月行っています。各事業部、各部門で持っているノウハウを共有することで、個人のスキルアップだけでなく、事業部間の連携・情報共有の促進も行っています。
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </section>
+
+            <!-- oficce -->
+            <section class="splide p-environment-oficce js-environment-oficce__slider" aria-label="Splideの基本的なHTML">
+                <div class="p-environment-oficce__inner">
+
+                    <!-- title -->
+                    <div class="c-title__wrapper c-title__wrapper-line p-environment-oficce__title-wrapper">
+                        <h2 class="c-title-ja">オフィス紹介</h2>
+                        <p class="c-title-en">oficce</p>
+                    </div>
+
+                    <!-- slider -->
+                    <div class="splide__track p-environment-oficce__slider">
+                        <ul class="splide__list p-environment-oficce__slider-list">
+                            <li class="splide__slide p-environment-oficce__slider-item"> <img
+                                    src="../assets/images/environment/environment_oficce_01.png" alt=""> </li>
+                            <li class="splide__slide p-environment-oficce__slider-item"> <img
+                                    src="../assets/images/environment/environment_oficce_02.png" alt=""> </li>
+                            <li class="splide__slide p-environment-oficce__slider-item"> <img
+                                    src="../assets/images/environment/environment_oficce_03.png" alt=""> </li>
+                            <li class="splide__slide p-environment-oficce__slider-item"> <img
+                                    src="../assets/images/environment/environment_oficce_04.png" alt=""> </li>
+                        </ul>
+                    </div>
+
+                    <!-- pegination-btn -->
+                    <button
+                        class="c-pagination-btn c-pagination-btn--prev p-environment-oficce__pagination-btn p-environment-oficce__pagination-btn--prev js-prev"></button>
+                    <button
+                        class="c-pagination-btn c-pagination-btn--next p-environment-oficce__pagination-btn p-environment-oficce__pagination-btn--next js-next"></button>
+
+                    <!-- pegination -->
+                    <ul class="p-environment-oficce__pagination js-pagination">
+                        <li>
+                            <button type="button" class="p-environment-oficce__pagination-dot js-pagination-dot is-active"
+                                aria-label="1枚目のスライドへ移動"></button>
+                        </li>
+                        <li>
+                            <button type="button" class="p-environment-oficce__pagination-dot js-pagination-dot"
+                                aria-label="2枚目のスライドへ移動"></button>
+                        </li>
+                        <li>
+                            <button type="button" class="p-environment-oficce__pagination-dot js-pagination-dot"
+                                aria-label="3枚目のスライドへ移動"></button>
+                        </li>
+                        <li>
+                            <button type="button" class="p-environment-oficce__pagination-dot js-pagination-dot"
+                                aria-label="4枚目のスライドへ移動"></button>
+                        </li>
                     </ul>
                 </div>
-                
-                <!-- pegination-btn -->
-                <button class="c-pagination-btn c-pagination-btn--prev p-environment-oficce__pagination-btn p-environment-oficce__pagination-btn--prev"></button>
-                <button class="c-pagination-btn c-pagination-btn--next p-environment-oficce__pagination-btn p-environment-oficce__pagination-btn--next"></button>
-                
-                <!-- pegination -->
-                <ul class="p-environment-oficce__pagination">
-                    <li class="p-environment-oficce__pagination-dot is-active"></li>
-                    <li class="p-environment-oficce__pagination-dot"></li>
-                    <li class="p-environment-oficce__pagination-dot"></li>
-                    <li class="p-environment-oficce__pagination-dot"></li>
-                </ul>
+            </section>
+        </div>
+
+        <!-- recruit -->
+        <section class="l-recruit">
+            <div class="l-recruit__inner">
+                <div class="l-recruit__block">
+
+                    <!-- title -->
+                    <h2 class="l-recruit__main-title">
+                        <picture>
+                            <!-- 画面幅が1080px以下の場合の画像 -->
+                            <source media="(max-width: 1080px)" srcset="../assets/images/common/recruit_title_sp.png">
+
+                            <!-- 上記の条件に当てはまらない場合のデフォルト画像 -->
+                            <img src="../assets/images/common/recruit_title.png" alt="" width="800" height="400">
+                        </picture>
+                    </h2>
+
+                    <!-- content -->
+                    <div class="l-recruit__content">
+
+                        <!-- text -->
+                        <div class="l-recruit__text">
+                            <div class="c-title__wrapper l-recruit__title">
+                                <h2 class="c-title-ja">採用情報を知る</h2>
+                                <p class="c-title-en">recruit info</p>
+                            </div>
+                            <div class="l-recruit__description"> <span>本年度の募集要項や、</span> <span>求める人物像ついてご紹介します。</span>
+                            </div>
+                        </div>
+
+                        <!-- btn -->
+                        <a href="../recruit/" class="c-btn l-recruit__btn">採用情報について詳しく見る<span
+                                class="c-arrow c-btn-arrow l-recruit__btn-arrow"></span></a>
+                    </div>
+                </div>
+
+                <!-- entry-btn -->
+                <a href="../entry/" class="l-recruit__entry-btn">
+                    <div class="l-recruit__entry-btn-content">
+                        <div class="c-title__wrapper l-recruit__entry-btn-title">
+                            <h2 class="c-title-ja">応募する</h2>
+                            <p class="c-title-en">entry</p>
+                        </div>
+                        <p class="l-recruit__entry-btn-description"> エントリーはこちらにページをご覧ください </p>
+                    </div>
+                    <span class="c-arrow c-btn-arrow l-recruit__entry-btn-arrow"></span>
+                </a>
             </div>
         </section>
-    </div>
-    
-    <!-- recruit -->
-    <section class="l-recruit">
-        <div class="l-recruit__inner">
-            <div class="l-recruit__block"> 
-                
-                <!-- title -->
-                <h2 class="l-recruit__main-title">
-                    <picture> 
-                        <!-- 画面幅が1080px以下の場合の画像 -->
-                        <source media="(max-width: 1080px)" srcset="../assets/images/common/recruit_title_sp.png">
-                        
-                        <!-- 上記の条件に当てはまらない場合のデフォルト画像 --> 
-                        <img src="../assets/images/common/recruit_title.png" alt="" width="800" height="400"> </picture>
-                </h2>
-                
-                <!-- content -->
-                <div class="l-recruit__content"> 
-                    
-                    <!-- text -->
-                    <div class="l-recruit__text">
-                        <div class="c-title__wrapper l-recruit__title">
-                            <h2 class="c-title-ja">採用情報を知る</h2>
-                            <p class="c-title-en">recruit info</p>
-                        </div>
-                        <div class="l-recruit__description"> <span>本年度の募集要項や、</span> <span>求める人物像ついてご紹介します。</span> </div>
-                    </div>
-                    
-                    <!-- btn --> 
-                    <a href="../recruit/" class="c-btn l-recruit__btn">採用情報について詳しく見る<span class="c-arrow c-btn-arrow l-recruit__btn-arrow"></span></a> </div>
-            </div>
-            
-            <!-- entry-btn --> 
-            <a href="../entry/" class="l-recruit__entry-btn">
-            <div class="l-recruit__entry-btn-content">
-                <div class="c-title__wrapper l-recruit__entry-btn-title">
-                    <h2 class="c-title-ja">応募する</h2>
-                    <p class="c-title-en">entry</p>
-                </div>
-                <p class="l-recruit__entry-btn-description"> エントリーはこちらにページをご覧ください </p>
-            </div>
-            <span class="c-arrow c-btn-arrow l-recruit__entry-btn-arrow"></span> </a> </div>
-    </section>
-</main>
+    </main>
 
-<!-- footer -->
-<footer class="l-footer">
-    <div class="l-footer__inner"> 
-        
-        <!-- logo -->
-        <div class="l-footer__logo">
-            <p class="l-footer__logo-text">新卒採用サイト</p>
+    <!-- footer -->
+    <footer class="l-footer">
+        <div class="l-footer__inner">
+
+            <!-- logo -->
+            <div class="l-footer__logo">
+                <p class="l-footer__logo-text">新卒採用サイト</p>
+            </div>
+
+            <!-- nav -->
+            <nav class="l-footer__nav" aria-label="フッターナビゲーション">
+                <ul class="l-footer__list">
+
+                    <!-- people -->
+                    <li class="l-footer__item"> <a href="../people/" class="l-footer__link"> <span
+                                class="l-footer__link-text"> 社員を知る <span
+                                    class="l-footer__link-text-en u-pc-hidden">people</span> </span> <span
+                                class="l-footer__link-arrow c-arrow u-pc-hidden"></span> </a> </li>
+
+                    <!-- business -->
+                    <li class="l-footer__item"> <a href="../business/" class="l-footer__link"> <span
+                                class="l-footer__link-text"> 仕事を知る <span
+                                    class="l-footer__link-text-en u-pc-hidden">business</span> </span> <span
+                                class="l-footer__link-arrow c-arrow u-pc-hidden"></span> </a> </li>
+
+                    <!-- company -->
+                    <li class="l-footer__item"> <a href="../company/" class="l-footer__link"> <span
+                                class="l-footer__link-text"> 会社を知る <span
+                                    class="l-footer__link-text-en u-pc-hidden">company</span> </span> <span
+                                class="l-footer__link-arrow c-arrow u-pc-hidden"></span> </a> </li>
+
+                    <!-- environment -->
+                    <li class="l-footer__item"> <a href="" class="l-footer__link"> <span class="l-footer__link-text">
+                                環境を知る <span class="l-footer__link-text-en u-pc-hidden">environment</span> </span> <span
+                                class="l-footer__link-arrow c-arrow u-pc-hidden"></span> </a> </li>
+
+                    <!-- recruit -->
+                    <li class="l-footer__item"> <a href="../recruit/" class="l-footer__link"> <span
+                                class="l-footer__link-text"> 採用情報を知る <span
+                                    class="l-footer__link-text-en u-pc-hidden">recruit info</span> </span> <span
+                                class="l-footer__link-arrow c-arrow u-pc-hidden"></span> </a> </li>
+
+                    <!-- entry -->
+                    <li class="l-footer__item l-footer__item--entry"> <a href="../entry/"
+                            class="l-footer__link">エントリーする</a> </li>
+                </ul>
+            </nav>
+
+            <!-- copy-right -->
+            <small class="l-footer__copyright">© BuzzCraft Co., Ltd.</small>
         </div>
-        
-        <!-- nav -->
-        <nav class="l-footer__nav" aria-label="フッターナビゲーション">
-            <ul class="l-footer__list">
-                
-                <!-- people -->
-                <li class="l-footer__item"> <a href="../people/" class="l-footer__link"> <span class="l-footer__link-text"> 社員を知る <span class="l-footer__link-text-en u-pc-hidden">people</span> </span> <span class="l-footer__link-arrow c-arrow u-pc-hidden"></span> </a> </li>
-                
-                <!-- business -->
-                <li class="l-footer__item"> <a href="../business/" class="l-footer__link"> <span class="l-footer__link-text"> 仕事を知る <span class="l-footer__link-text-en u-pc-hidden">business</span> </span> <span class="l-footer__link-arrow c-arrow u-pc-hidden"></span> </a> </li>
-                
-                <!-- company -->
-                <li class="l-footer__item"> <a href="../company/" class="l-footer__link"> <span class="l-footer__link-text"> 会社を知る <span class="l-footer__link-text-en u-pc-hidden">company</span> </span> <span class="l-footer__link-arrow c-arrow u-pc-hidden"></span> </a> </li>
-                
-                <!-- environment -->
-                <li class="l-footer__item"> <a href="" class="l-footer__link"> <span class="l-footer__link-text"> 環境を知る <span class="l-footer__link-text-en u-pc-hidden">environment</span> </span> <span class="l-footer__link-arrow c-arrow u-pc-hidden"></span> </a> </li>
-                
-                <!-- recruit -->
-                <li class="l-footer__item"> <a href="../recruit/" class="l-footer__link"> <span class="l-footer__link-text"> 採用情報を知る <span class="l-footer__link-text-en u-pc-hidden">recruit info</span> </span> <span class="l-footer__link-arrow c-arrow u-pc-hidden"></span> </a> </li>
-                
-                <!-- entry -->
-                <li class="l-footer__item l-footer__item--entry"> <a href="../entry/" class="l-footer__link">エントリーする</a> </li>
-            </ul>
-        </nav>
-        
-        <!-- copy-right --> 
-        <small class="l-footer__copyright">© BuzzCraft Co., Ltd.</small> </div>
-</footer>
+    </footer>
 
-<!-- ja読み込み -->
-<script src="../assets/js/main.js" type="module"></script>
+
+    <!-- splide読み込み -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" defer></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"
+        defer></script>
+
+    <!-- ja読み込み -->
+    <script src="../assets/js/main.js" type="module"></script>
 </body>
+
 </html>

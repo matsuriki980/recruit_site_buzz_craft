@@ -2640,19 +2640,9 @@ body {
   overflow: hidden;
   margin-bottom: 40rem;
 }
-.p-environment-oficce__slider-list {
-  display: grid;
-  grid-template-columns: repeat(4, 268rem);
-  width: 100vw;
-  gap: 14rem;
-}
-@media (width >= 900px) {
-  .p-environment-oficce__slider-list {
-    grid-template-columns: repeat(4, 820rem);
-  }
-}
 .p-environment-oficce__slider-item {
   opacity: 0.4;
+  transition: opacity 0.3s;
 }
 .p-environment-oficce__slider-item.is-active {
   opacity: 1;
@@ -2694,6 +2684,7 @@ body {
   border-radius: 50%;
   opacity: 0.3;
   background-color: #303030;
+  transition: opacity 0.3s;
 }
 .p-environment-oficce__pagination-dot.is-active {
   opacity: 1;
