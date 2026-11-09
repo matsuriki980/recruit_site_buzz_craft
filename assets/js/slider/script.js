@@ -68,9 +68,9 @@ export function initSlider() {
     }
 
     // =============================================================================
-    // environment-oficce
+    // environment-office
     // =============================================================================
-    if (slider.classList.contains("js-environment-oficce__slider")) {
+    if (slider.classList.contains("js-environment-office__slider")) {
       Object.assign(options, {
         focus: "center",
         start: 0,

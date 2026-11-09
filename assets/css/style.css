@@ -2624,70 +2624,70 @@ body {
   margin-bottom: 20rem;
 }
 /* --------------------------------------
-  environment-oficce
+  environment-office
 -------------------------------------- */
-.p-environment-oficce__inner {
+.p-environment-office__inner {
   padding: 56rem 0 72rem;
   position: relative;
 }
 @media (width >= 900px) {
-  .p-environment-oficce__inner {
+  .p-environment-office__inner {
     padding: 0 0 180rem;
   }
 }
-.p-environment-oficce__title-wrapper {
+.p-environment-office__title-wrapper {
   color: #71bf51;
   margin-bottom: 45rem;
   margin-inline: 20rem;
 }
 @media (width >= 900px) {
-  .p-environment-oficce__title-wrapper {
+  .p-environment-office__title-wrapper {
     margin-inline: 170rem;
   }
 }
-.p-environment-oficce__slider {
+.p-environment-office__slider {
   overflow: hidden;
   margin-bottom: 40rem;
 }
-.p-environment-oficce__slider-item {
+.p-environment-office__slider-item {
   opacity: 0.4;
   transition: opacity 0.3s;
 }
-.p-environment-oficce__slider-item.is-active {
+.p-environment-office__slider-item.is-active {
   opacity: 1;
 }
-.p-environment-oficce__pagination-btn {
+.p-environment-office__pagination-btn {
   top: 216rem;
 }
 @media (width >= 900px) {
-  .p-environment-oficce__pagination-btn {
+  .p-environment-office__pagination-btn {
     top: 328rem;
   }
 }
-.p-environment-oficce__pagination-btn--next {
+.p-environment-office__pagination-btn--next {
   right: 9rem;
 }
 @media (width >= 900px) {
-  .p-environment-oficce__pagination-btn--next {
+  .p-environment-office__pagination-btn--next {
     right: 280rem;
   }
 }
-.p-environment-oficce__pagination-btn--prev {
+.p-environment-office__pagination-btn--prev {
   right: auto;
   left: 9rem;
 }
 @media (width >= 900px) {
-  .p-environment-oficce__pagination-btn--prev {
+  .p-environment-office__pagination-btn--prev {
     left: 280rem;
   }
 }
-.p-environment-oficce__pagination {
+.p-environment-office__pagination {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10rem;
 }
-.p-environment-oficce__pagination-dot {
+.p-environment-office__pagination-dot {
   width: 10rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
@@ -2695,7 +2695,7 @@ body {
   background-color: #303030;
   transition: opacity 0.3s;
 }
-.p-environment-oficce__pagination-dot.is-active {
+.p-environment-office__pagination-dot.is-active {
   opacity: 1;
 }
 
