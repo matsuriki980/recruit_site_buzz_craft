@@ -236,6 +236,7 @@
 		inset: 0;
 		opacity: 0;
 		visibility: hidden;
+		transition: opacity 0.3s, visibility 0.3s;
 	
 		// hover時、リンクに対応する画像を表示する	
 		&.is-active {
