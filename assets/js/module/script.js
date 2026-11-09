@@ -2,7 +2,7 @@
   module
 */
 
-export function initScript() {
+export function initModule() {
   const header = document.querySelector(".js-header");
   const headerScrollTrigger = document.querySelector(
     ".js-header__scroll-trigger",
